@@ -1,0 +1,39 @@
+﻿@model CityWeather;
+@{
+    string GetBackgroundColor(int? Fahrenheit)
+    {
+        if (Fahrenheit < 44)
+            return "blueBackground";
+
+        else if (Fahrenheit >= 44 && Fahrenheit <= 74)
+            return "greenBackground";
+
+        else
+            return "orangeBackground";
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="~/StyleSheet.css" rel="stylesheet">
+</head>
+<body>
+    <div class="page-content">
+        <div class="weatherContainer">
+            <div class="weatherContainer">
+                    <div class="weatherItem @GetBackgroundColor(Model.TemperatureFahrenheit)">
+                        <div class="weatherCity">
+                            <p class="weatherCityName">@Model.CityName</p>
+                            <p class="weatherTime">@Model.DateAndTime.ToString("hh:mm tt", CultureInfo.InvariantCulture)</p>
+                            <a href="../weather/@Model.CityUniqueCode">Details</a>
+                        </div>
+                        <div class="weatherDivider"></div>
+                        <div class="weatherTemp">@Model.TemperatureFahrenheit &deg;F</div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

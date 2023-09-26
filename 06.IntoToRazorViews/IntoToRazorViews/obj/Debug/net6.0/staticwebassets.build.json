@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "FaJ9Cwze9utekatoX98VTJvneN9cpYA6bCgJlHRlczo=",
+  "Source": "IntoToRazorViews",
+  "BasePath": "_content/IntoToRazorViews",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "IntoToRazorViews\\wwwroot",
+      "Source": "IntoToRazorViews",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\06.IntoToRazorViews\\IntoToRazorViews\\wwwroot\\",
+      "BasePath": "_content/IntoToRazorViews",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Coding\\CSharp\\NetCore\\06.IntoToRazorViews\\IntoToRazorViews\\wwwroot\\StyleSheet.css",
+      "SourceId": "IntoToRazorViews",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\06.IntoToRazorViews\\IntoToRazorViews\\wwwroot\\",
+      "BasePath": "_content/IntoToRazorViews",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ]
+}
