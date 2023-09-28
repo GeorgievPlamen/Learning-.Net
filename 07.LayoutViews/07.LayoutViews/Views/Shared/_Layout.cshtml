@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <title>@ViewBag.Title</title>
+    <link href="~/StyleSheet.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header"><a href="~/">Weather App</a></header>
+    <nav class="navbar text-center">
+        <ul>
+            <li><a href="~/weather/LDN">London</a></li>
+            <li><a href="~/weather/NYC">New York City</a></li>
+            <li><a href="~/weather/PAR">Paris</a></li>
+        </ul>
+    </nav>
+    <div class="page-content">
+        @RenderBody();
+    </div>
+</body>
+</html>
