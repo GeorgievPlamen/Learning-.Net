@@ -1,0 +1,12 @@
+﻿@{
+    ListModel list = new ListModel();
+    list.Title = "Programming languages";
+    list.Names.Add("Java");
+    list.Names.Add("C#");
+    list.Names.Add("Python");
+}
+<h1>Home</h1>
+
+@{
+    await Html.RenderPartialAsync("_PartialView", list);
+}

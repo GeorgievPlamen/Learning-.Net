@@ -1,0 +1,17 @@
+﻿@model ListModel    
+<dl>
+        <dt>Paris</dt>
+        <dd>Lots of romance there.</dd>
+        <dt>New York City</dt>
+        <dd>Best Police Department</dd>
+        <dt>London</dt>
+        <dd>The melting pot</dd>
+    </dl>
+
+    <ul>
+        <p>@Model.Title</p>
+        @foreach(string item in Model.Names)
+        {
+            <li>@item</li>
+        }
+    </ul>

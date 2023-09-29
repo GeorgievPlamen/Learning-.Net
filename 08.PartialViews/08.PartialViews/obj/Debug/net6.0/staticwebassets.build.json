@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "MHyemIXo8y4RlVlQXXBiZEqLUZTGxi68m9i8/3Gk834=",
+  "Source": "08.PartialViews",
+  "BasePath": "_content/08.PartialViews",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "08.PartialViews\\wwwroot",
+      "Source": "08.PartialViews",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\08.PartialViews\\08.PartialViews\\wwwroot\\",
+      "BasePath": "_content/08.PartialViews",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Coding\\CSharp\\NetCore\\08.PartialViews\\08.PartialViews\\wwwroot\\StyleSheet.css",
+      "SourceId": "08.PartialViews",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\08.PartialViews\\08.PartialViews\\wwwroot\\",
+      "BasePath": "_content/08.PartialViews",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ]
+}
