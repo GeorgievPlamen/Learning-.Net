@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "lU7wNXTUWICDWP508SECDjxNX7n+b85rII1DYgZMEjQ=",
+  "Source": "09.ViewComponents",
+  "BasePath": "_content/09.ViewComponents",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "09.ViewComponents\\wwwroot",
+      "Source": "09.ViewComponents",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\09.ViewComponents\\09.ViewComponents\\wwwroot\\",
+      "BasePath": "_content/09.ViewComponents",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Coding\\CSharp\\NetCore\\09.ViewComponents\\09.ViewComponents\\wwwroot\\StyleSheet.css",
+      "SourceId": "09.ViewComponents",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\09.ViewComponents\\09.ViewComponents\\wwwroot\\",
+      "BasePath": "_content/09.ViewComponents",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    },
+    {
+      "Identity": "D:\\Coding\\CSharp\\NetCore\\09.ViewComponents\\09.ViewComponents\\wwwroot\\workers.js",
+      "SourceId": "09.ViewComponents",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\09.ViewComponents\\09.ViewComponents\\wwwroot\\",
+      "BasePath": "_content/09.ViewComponents",
+      "RelativePath": "workers.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\workers.js"
+    }
+  ]
+}

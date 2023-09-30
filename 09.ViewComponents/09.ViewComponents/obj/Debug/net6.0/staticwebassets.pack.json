@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Coding\\CSharp\\NetCore\\09.ViewComponents\\09.ViewComponents\\wwwroot\\StyleSheet.css",
+      "PackagePath": "staticwebassets\\StyleSheet.css"
+    },
+    {
+      "Id": "D:\\Coding\\CSharp\\NetCore\\09.ViewComponents\\09.ViewComponents\\wwwroot\\workers.js",
+      "PackagePath": "staticwebassets\\workers.js"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.09.ViewComponents.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.09.ViewComponents.props",
+      "PackagePath": "build\\09.ViewComponents.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.09.ViewComponents.props",
+      "PackagePath": "buildMultiTargeting\\09.ViewComponents.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.09.ViewComponents.props",
+      "PackagePath": "buildTransitive\\09.ViewComponents.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

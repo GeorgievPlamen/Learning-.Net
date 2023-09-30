@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/StyleSheet.css" rel="stylesheet"/>
+</head>
+<body>
+    <header class="container">
+        <nav class="navbar">
+            <h1 class="navbar-brand">View Components Demo App</h1>
+            <ul>
+                <li><a href="~/">Home</a></li>
+                <li><a href="~/about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        @RenderBody()
+    </main>
+</body>
+</html>
