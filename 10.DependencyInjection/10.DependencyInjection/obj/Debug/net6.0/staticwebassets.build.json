@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "0iCYcuhuP3hucgDEJum1PCHkhnxweL0gH5s6s7RgU0I=",
+  "Source": "10.DependencyInjection",
+  "BasePath": "_content/10.DependencyInjection",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "10.DependencyInjection\\wwwroot",
+      "Source": "10.DependencyInjection",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\10.DependencyInjection\\10.DependencyInjection\\wwwroot\\",
+      "BasePath": "_content/10.DependencyInjection",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Coding\\CSharp\\NetCore\\10.DependencyInjection\\10.DependencyInjection\\wwwroot\\StyleSheet.css",
+      "SourceId": "10.DependencyInjection",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\10.DependencyInjection\\10.DependencyInjection\\wwwroot\\",
+      "BasePath": "_content/10.DependencyInjection",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ]
+}
