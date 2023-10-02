@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "RoylDsc/mTrec9mv3SdWntk9mc1v1RJpHGSpXPbfeck=",
+  "Source": "11.Environment",
+  "BasePath": "_content/11.Environment",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "11.Environment\\wwwroot",
+      "Source": "11.Environment",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\11.Environment\\11.Environment\\wwwroot\\",
+      "BasePath": "_content/11.Environment",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Coding\\CSharp\\NetCore\\11.Environment\\11.Environment\\wwwroot\\StyleSheet.css",
+      "SourceId": "11.Environment",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\11.Environment\\11.Environment\\wwwroot\\",
+      "BasePath": "_content/11.Environment",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ]
+}
