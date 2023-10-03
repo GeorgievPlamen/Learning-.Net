@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>_12.HttpClientWithStocks</RootNamespace>
+    <UserSecretsId>2ed2dd8f-8283-4c70-b731-2c2c1a28e5bb</UserSecretsId>
+  </PropertyGroup>
+
+</Project>

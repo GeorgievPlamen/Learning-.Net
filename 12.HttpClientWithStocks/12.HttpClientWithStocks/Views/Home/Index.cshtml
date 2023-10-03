@@ -1,0 +1,36 @@
+﻿@model _12.HttpClientWithStocks.Models.Stock
+@{
+    ViewBag.Title = "Home";
+}
+
+<div class="box trading-panel">
+
+    <div class="flex trading-panel-flex"
+         <div id="stock-price-panel">
+              <div class="stock">
+                  <h1 class="stock-title">@Model.StockSymbol</h1>
+
+                  <table>
+                      <tbody>
+                          <tr>
+                              <td>Current:</td>
+                              <th>@Model.CurrentPrice</th>
+                          </tr>
+                          <tr>
+                              <td>Highest:</td>
+                              <th>@Model.HighestPrice</th>
+                          </tr>
+                          <tr>
+                              <td>Lowest:</td>
+                              <th>@Model.LowestPrice</th>
+                          </tr>
+                          <tr>
+                              <td>Open:</td>
+                              <th>@Model.OpenPrice</th>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+         </div>
+    </div>
+</div>

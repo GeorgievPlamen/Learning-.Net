@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "1SAEW47cT2dGNxv/D2UO5gakbzqdXzwniedYki3kQJY=",
+  "Source": "12.HttpClientWithStocks",
+  "BasePath": "_content/12.HttpClientWithStocks",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "12.HttpClientWithStocks\\wwwroot",
+      "Source": "12.HttpClientWithStocks",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\12.HttpClientWithStocks\\12.HttpClientWithStocks\\wwwroot\\",
+      "BasePath": "_content/12.HttpClientWithStocks",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Coding\\CSharp\\NetCore\\12.HttpClientWithStocks\\12.HttpClientWithStocks\\wwwroot\\StyleSheet.css",
+      "SourceId": "12.HttpClientWithStocks",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\12.HttpClientWithStocks\\12.HttpClientWithStocks\\wwwroot\\",
+      "BasePath": "_content/12.HttpClientWithStocks",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ]
+}
