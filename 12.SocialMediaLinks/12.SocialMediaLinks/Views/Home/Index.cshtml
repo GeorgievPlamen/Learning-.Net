@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Social Media Links</title>
+        <meta charset="utf-8"/>
+        <link href="~/StyleSheet.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>Social Media Links</header>
+        <main>
+            <div>
+                <a href="@ViewBag.Links[0]">FaceBook</a>
+            </div>
+            <environment exclude="Development">
+            <div>
+                <a href="@ViewBag.Links[1]">Instagram</a>
+            </div>
+            </environment>
+        <div>
+            <a href="@ViewBag.Links[2]">Twitter</a>
+        </div>
+        <div>
+            <a href="@ViewBag.Links[3]">Youtube</a>
+        </div>
+        </main>
+    </body>
+</html>

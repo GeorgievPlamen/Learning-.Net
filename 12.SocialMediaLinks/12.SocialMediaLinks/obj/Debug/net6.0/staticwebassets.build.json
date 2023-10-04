@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "F9O3IFbk0UoHBQOszfccjZ74z30fGERXiTm1QYXDSnA=",
+  "Source": "12.SocialMediaLinks",
+  "BasePath": "_content/12.SocialMediaLinks",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "12.SocialMediaLinks\\wwwroot",
+      "Source": "12.SocialMediaLinks",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\12.SocialMediaLinks\\12.SocialMediaLinks\\wwwroot\\",
+      "BasePath": "_content/12.SocialMediaLinks",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Coding\\CSharp\\NetCore\\12.SocialMediaLinks\\12.SocialMediaLinks\\wwwroot\\StyleSheet.css",
+      "SourceId": "12.SocialMediaLinks",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\12.SocialMediaLinks\\12.SocialMediaLinks\\wwwroot\\",
+      "BasePath": "_content/12.SocialMediaLinks",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ]
+}
