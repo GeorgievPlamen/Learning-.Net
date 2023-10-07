@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "+y6Mue2JIUzZ4TcAhkUZ6jcuKFoChA2VHo76UU2/Tg0=",
+  "Source": "12.StocksApp",
+  "BasePath": "_content/12.StocksApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "12.StocksApp\\wwwroot",
+      "Source": "12.StocksApp",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\12.StocksApp\\12.StocksApp\\wwwroot\\",
+      "BasePath": "_content/12.StocksApp",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Coding\\CSharp\\NetCore\\12.StocksApp\\12.StocksApp\\wwwroot\\StyleSheet.css",
+      "SourceId": "12.StocksApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\12.StocksApp\\12.StocksApp\\wwwroot\\",
+      "BasePath": "_content/12.StocksApp",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ]
+}
