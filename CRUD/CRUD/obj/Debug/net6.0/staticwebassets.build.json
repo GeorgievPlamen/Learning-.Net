@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "5Tn/KjCJ1A7A/d4UeyJvJHeive3NcqsloWCzfEATtns=",
+  "Source": "CRUD",
+  "BasePath": "_content/CRUD",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CRUD\\wwwroot",
+      "Source": "CRUD",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\CRUD\\CRUD\\wwwroot\\",
+      "BasePath": "_content/CRUD",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Coding\\CSharp\\NetCore\\CRUD\\CRUD\\wwwroot\\StyleSheet.css",
+      "SourceId": "CRUD",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\CRUD\\CRUD\\wwwroot\\",
+      "BasePath": "_content/CRUD",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ]
+}
