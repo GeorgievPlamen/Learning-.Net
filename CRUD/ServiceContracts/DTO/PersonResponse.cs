@@ -1,4 +1,5 @@
 ﻿using Entities;
+using ServiceContracts.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,6 +57,21 @@ namespace ServiceContracts.DTO
                 CountryId.ToString() + " " +
                 Address?.ToString() + " " +
                 ReceiveNewsLetters.ToString();
+        }
+
+        public PersonUpdateRequest ToPersonUpdateRequest()
+        {
+            return new PersonUpdateRequest()
+            {
+                PersonId = this.PersonId,
+                PersonName = this.PersonName,
+                Email = this.Email,
+                DateOfBirth = this.DateOfBirth,
+                Gender = (GenderOptions)Enum.Parse(typeof(GenderOptions), Gender, true),
+                Address = this.Address,
+                CountryId = this.CountryId,
+                ReceiveNewsLetters = this.ReceiveNewsLetters
+            };
         }
     }
 

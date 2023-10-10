@@ -5,6 +5,7 @@ using ServiceContracts;
 using ServiceContracts.DTO;
 using Services;
 using Xunit.Abstractions;
+using ServiceContracts.Enums;
 
 namespace TestsX
 {
@@ -381,6 +382,250 @@ namespace TestsX
                     }
                 }
             }
+        }
+        #endregion
+        #region GetSortedPersons
+        //When we sort based on PersonName in DESC, should return list in descending on PersonName
+        [Fact]
+        public void GetSortedPersons()
+        {
+            //Arrange
+            CountryAddRequest countryRequest1 = new CountryAddRequest()
+            { CountryName = "USA" };
+            CountryAddRequest countryRequest2 = new CountryAddRequest()
+            { CountryName = "Bulgaria" };
+
+            CountryResponse countryResponse1 = _countriesService.AddCountry(countryRequest1);
+            CountryResponse countryResponse2 = _countriesService.AddCountry(countryRequest2);
+
+            PersonAddRequest personRequest1 = new PersonAddRequest()
+            {
+                PersonName = "John",
+                Email = "John@email.com",
+                Gender = ServiceContracts.Enums.GenderOptions.Male,
+                Address = "john lives here",
+                CountryId = countryResponse1.CountryID,
+                DateOfBirth = DateTime.Parse("1999-02-02"),
+                ReceiveNewsLetters = true
+            };
+
+            PersonAddRequest personRequest2 = new PersonAddRequest()
+            {
+                PersonName = "Smith",
+                Email = "smith@email.com",
+                Gender = ServiceContracts.Enums.GenderOptions.Male,
+                Address = "smith lives here",
+                CountryId = countryResponse1.CountryID,
+                DateOfBirth = DateTime.Parse("2004-05-02"),
+                ReceiveNewsLetters = true
+            };
+
+            PersonAddRequest personRequest3 = new PersonAddRequest()
+            {
+                PersonName = "Jane",
+                Email = "jane@email.com",
+                Gender = ServiceContracts.Enums.GenderOptions.Female,
+                Address = "jane lives here",
+                CountryId = countryResponse2.CountryID,
+                DateOfBirth = DateTime.Parse("1996-12-10"),
+                ReceiveNewsLetters = true
+            };
+
+            List<PersonAddRequest> personRequests = new List<PersonAddRequest>()
+            { personRequest1, personRequest2, personRequest3 };
+
+            List<PersonResponse> personResponses = new List<PersonResponse>();
+
+            foreach (PersonAddRequest personRequest in personRequests)
+            {
+                PersonResponse personResponse = _personService.AddPerson(personRequest);
+                personResponses.Add(personResponse);
+            }
+
+            //print add list
+            _outputHelper.WriteLine("Expected: ");
+            foreach (PersonResponse element in personResponses)
+            {
+                _outputHelper.WriteLine(element.ToString());
+            }
+
+            List<PersonResponse> allPersons = _personService.GetAllPersons();
+
+            //Act
+            List<PersonResponse> personResponsesFromSort = _personService.GetSortedPersons(allPersons, nameof(Person.PersonName), SortOrderOptions.DESC);
+
+            //print actual list
+            _outputHelper.WriteLine("Actual: ");
+            foreach (PersonResponse element in personResponsesFromSort)
+            {
+                _outputHelper.WriteLine(element.ToString());
+            }
+
+            personResponses = personResponses.OrderByDescending(temp => temp.PersonName).ToList();
+
+            //Assert
+            for (int i = 0; i< personResponses.Count; i++)
+            {
+                Assert.Equal(personResponses[i], personResponsesFromSort[i]);
+            }
+        }
+        #endregion
+        #region UpdatePerson
+        //When we supply null as request, should throw ArgumentNullException
+        [Fact]
+        public void UpdatePerson_NullPerson()
+        {   
+            //Arrange
+            PersonUpdateRequest personUpdateRequest = null;
+           
+            //Assert
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                //Act
+                _personService.UpdatePerson(personUpdateRequest);
+            });
+        }
+
+        //When we supply invalid personId, should throw ArgumentException
+        [Fact]
+        public void UpdatePerson_InvalidPersonId()
+        {
+            //Arrange
+            PersonUpdateRequest personUpdateRequest = new PersonUpdateRequest()
+            { PersonId = Guid.NewGuid()};
+
+            //Assert
+            Assert.Throws<ArgumentException>(() =>
+            {
+                //Act
+                _personService.UpdatePerson(personUpdateRequest);
+            });
+        }
+
+        //When we supply null as PersonName, should throw ArgumentException
+        [Fact]
+        public void UpdatePerson_PersonNameIsNull()
+        {
+            //Arrange
+            CountryAddRequest countryAddRequest = new CountryAddRequest()
+            { CountryName = "UK" };
+            CountryResponse countryResponse = _countriesService.AddCountry(countryAddRequest);
+
+            PersonAddRequest personAddRequest = new PersonAddRequest()
+            {
+                PersonName = "John",
+                Email = "John@email.com",
+                Gender = ServiceContracts.Enums.GenderOptions.Male,
+                Address = "john lives here",
+                CountryId = countryResponse.CountryID,
+                DateOfBirth = DateTime.Parse("1999-02-02"),
+                ReceiveNewsLetters = true
+            };
+
+            PersonResponse personResponseFromAdd = _personService.AddPerson(personAddRequest);
+
+            PersonUpdateRequest personUpdateRequest = personResponseFromAdd.ToPersonUpdateRequest();
+            personUpdateRequest.PersonName = null;
+
+            //Assert
+            Assert.Throws<ArgumentException>(() =>
+            {
+                //Act
+                _personService.UpdatePerson(personUpdateRequest);
+            });
+        }
+
+        //First we add a new person and try to update the same
+        [Fact]
+        public void UpdatePerson_PersonFullDetails()
+        {
+            //Arrange
+            CountryAddRequest countryAddRequest = new CountryAddRequest()
+            { CountryName = "UK" };
+            CountryResponse countryResponse = _countriesService.AddCountry(countryAddRequest);
+
+            PersonAddRequest personAddRequest = new PersonAddRequest()
+            {
+                PersonName = "John",
+                Email = "John@email.com",
+                Gender = ServiceContracts.Enums.GenderOptions.Male,
+                Address = "john lives here",
+                CountryId = countryResponse.CountryID,
+                DateOfBirth = DateTime.Parse("1999-02-02"),
+                ReceiveNewsLetters = true
+            };
+
+            PersonResponse personResponseFromAdd = _personService.AddPerson(personAddRequest);
+
+            PersonUpdateRequest personUpdateRequest = personResponseFromAdd.ToPersonUpdateRequest();
+            personUpdateRequest.PersonName = "William";
+            personUpdateRequest.Email = "william@example.com";
+
+            //Act
+            PersonResponse personResponseFromUpdate = _personService.UpdatePerson(personUpdateRequest);
+            PersonResponse? personResponseFromGet = _personService.GetPersonByPersonId(personResponseFromUpdate.PersonId);
+
+            //Assert
+            Assert.Equal(personResponseFromGet, personResponseFromUpdate);
+        }
+        #endregion
+        #region DeletePerson
+        //If you supply a valid PersonId, it should return true
+        [Fact]
+        public void DeletePerson_ValidPersonId()
+        {
+            //Arrange
+            CountryAddRequest countryAddRequest = new CountryAddRequest()
+            { CountryName = "UK" };
+            CountryResponse countryResponse = _countriesService.AddCountry(countryAddRequest);
+
+            PersonAddRequest personAddRequest = new PersonAddRequest()
+            {
+                PersonName = "John",
+                Email = "John@email.com",
+                Gender = ServiceContracts.Enums.GenderOptions.Male,
+                Address = "john lives here",
+                CountryId = countryResponse.CountryID,
+                DateOfBirth = DateTime.Parse("1999-02-02"),
+                ReceiveNewsLetters = true
+            };
+
+            PersonResponse personResponseFromAdd = _personService.AddPerson(personAddRequest);
+
+            //Act
+            bool isDeleted = _personService.DeletePerson(personResponseFromAdd.PersonId);
+        
+            //Assert
+            Assert.True(isDeleted);
+        }
+
+        //If you supply a invalid PersonId, it should return false
+        [Fact]
+        public void DeletePerson_InvalidPersonId()
+        {
+            //Arrange
+            CountryAddRequest countryAddRequest = new CountryAddRequest()
+            { CountryName = "UK" };
+            CountryResponse countryResponse = _countriesService.AddCountry(countryAddRequest);
+
+            PersonAddRequest personAddRequest = new PersonAddRequest()
+            {
+                PersonName = "John",
+                Email = "John@email.com",
+                Gender = ServiceContracts.Enums.GenderOptions.Male,
+                Address = "john lives here",
+                CountryId = countryResponse.CountryID,
+                DateOfBirth = DateTime.Parse("1999-02-02"),
+                ReceiveNewsLetters = true
+            };
+
+            PersonResponse personResponseFromAdd = _personService.AddPerson(personAddRequest);
+
+            //Act
+            bool isDeleted = _personService.DeletePerson(Guid.NewGuid());
+
+            //Assert
+            Assert.False(isDeleted);
         }
         #endregion
     }
