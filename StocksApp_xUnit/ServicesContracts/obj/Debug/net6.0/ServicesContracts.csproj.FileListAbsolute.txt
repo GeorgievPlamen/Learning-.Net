@@ -1,0 +1,15 @@
+D:\Coding\CSharp\NetCore\StocksApp_xUnit\ServicesContracts\bin\Debug\net6.0\ServicesContracts.deps.json
+D:\Coding\CSharp\NetCore\StocksApp_xUnit\ServicesContracts\bin\Debug\net6.0\ServicesContracts.dll
+D:\Coding\CSharp\NetCore\StocksApp_xUnit\ServicesContracts\bin\Debug\net6.0\ServicesContracts.pdb
+D:\Coding\CSharp\NetCore\StocksApp_xUnit\ServicesContracts\obj\Debug\net6.0\ServicesContracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\CSharp\NetCore\StocksApp_xUnit\ServicesContracts\obj\Debug\net6.0\ServicesContracts.AssemblyInfoInputs.cache
+D:\Coding\CSharp\NetCore\StocksApp_xUnit\ServicesContracts\obj\Debug\net6.0\ServicesContracts.AssemblyInfo.cs
+D:\Coding\CSharp\NetCore\StocksApp_xUnit\ServicesContracts\obj\Debug\net6.0\ServicesContracts.csproj.CoreCompileInputs.cache
+D:\Coding\CSharp\NetCore\StocksApp_xUnit\ServicesContracts\obj\Debug\net6.0\ServicesContracts.dll
+D:\Coding\CSharp\NetCore\StocksApp_xUnit\ServicesContracts\obj\Debug\net6.0\refint\ServicesContracts.dll
+D:\Coding\CSharp\NetCore\StocksApp_xUnit\ServicesContracts\obj\Debug\net6.0\ServicesContracts.pdb
+D:\Coding\CSharp\NetCore\StocksApp_xUnit\ServicesContracts\obj\Debug\net6.0\ref\ServicesContracts.dll
+D:\Coding\CSharp\NetCore\StocksApp_xUnit\ServicesContracts\bin\Debug\net6.0\Entities.dll
+D:\Coding\CSharp\NetCore\StocksApp_xUnit\ServicesContracts\bin\Debug\net6.0\Entities.pdb
+D:\Coding\CSharp\NetCore\StocksApp_xUnit\ServicesContracts\obj\Debug\net6.0\ServicesContracts.csproj.AssemblyReference.cache
+D:\Coding\CSharp\NetCore\StocksApp_xUnit\ServicesContracts\obj\Debug\net6.0\ServicesContracts.csproj.CopyComplete

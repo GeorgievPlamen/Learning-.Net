@@ -1,6 +1,8 @@
-﻿@{
+﻿@model Models.StockTrade
+@{
     ViewBag.Title = "Finnhub";
 }
 
-<p>@ViewBag.Token</p>
-<p>@ViewBag.Symbol</p>
+<p>@Model.StockSymbol</p>
+<p>@Model.StockName</p>
+<p>@Model.Price</p>
