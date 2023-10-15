@@ -24,3 +24,13 @@ D:\Coding\CSharp\NetCore\CRUD\CRUD\obj\Debug\net6.0\refint\CRUD.dll
 D:\Coding\CSharp\NetCore\CRUD\CRUD\obj\Debug\net6.0\CRUD.pdb
 D:\Coding\CSharp\NetCore\CRUD\CRUD\obj\Debug\net6.0\CRUD.genruntimeconfig.cache
 D:\Coding\CSharp\NetCore\CRUD\CRUD\obj\Debug\net6.0\ref\CRUD.dll
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Entities.dll
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\ServiceContracts.dll
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Services.dll
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Entities.pdb
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\ServiceContracts.pdb
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Services.pdb
+D:\Coding\CSharp\NetCore\CRUD\CRUD\obj\Debug\net6.0\CRUD.csproj.AssemblyReference.cache
+D:\Coding\CSharp\NetCore\CRUD\CRUD\obj\Debug\net6.0\CRUD.RazorAssemblyInfo.cache
+D:\Coding\CSharp\NetCore\CRUD\CRUD\obj\Debug\net6.0\CRUD.RazorAssemblyInfo.cs
+D:\Coding\CSharp\NetCore\CRUD\CRUD\obj\Debug\net6.0\CRUD.csproj.CopyComplete

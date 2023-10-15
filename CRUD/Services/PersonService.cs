@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Numerics;
 using Entities;
 using ServiceContracts;
 using ServiceContracts.DTO;
@@ -13,10 +14,80 @@ namespace Services
         private readonly List<Person> _persons;
         private readonly ICountriesService _countriesService;
 
-        public PersonService()
+        public PersonService(bool initialize = true)
         {
             _persons = new List<Person>();
             _countriesService = new CountriesService();
+
+            if(initialize)
+            {
+                _persons.Add(new Person()
+                {
+                    PersonId = Guid.Parse("705201EB-C371-4207-A7BB-41B18572655F"),
+                    PersonName = "Robinetta",
+                    Email = "rfryatt0@omniture.com",
+                    DateOfBirth = DateTime.Parse("1988-4-2"),
+                    Gender = "Female",
+                    Address = "13 Lien Center", 
+                    ReceiveNewsLetters = true,
+                    CountryId = Guid.Parse("79803FF6-D5B5-4EFA-B62C-C8E7A6E21EE1")
+                });
+                _persons.Add(new Person()
+                {
+                    PersonId = Guid.Parse("B8A30DBF-654B-4636-9175-73CE386D78D1"),
+                    PersonName = "Theresa",
+                    Email = "tshepland1@omniture.com",
+                    DateOfBirth = DateTime.Parse("1988-4-4"),
+                    Gender = "Female",
+                    Address = "13 Lien Center",
+                    ReceiveNewsLetters = false,
+                    CountryId = Guid.Parse("B3E412DE-7D59-49D4-ADD6-E3CDD507FD81")
+                });
+                _persons.Add(new Person()
+                {
+                    PersonId = Guid.Parse("D6BEC070-E2A2-4BB5-8392-7F466B847B47"),
+                    PersonName = "Sutherland",
+                    Email = "jgiacobbo3@surveymonkey.com",
+                    DateOfBirth = DateTime.Parse("1992-8-6"),
+                    Gender = "Male",
+                    Address = "13 Lien Center",
+                    ReceiveNewsLetters = true,
+                    CountryId = Guid.Parse("79803FF6-D5B5-4EFA-B62C-C8E7A6E21EE1")
+                });
+                _persons.Add(new Person()
+                {
+                    PersonId = Guid.Parse("0C72A483-3ED3-45FC-A8A8-EA2D940ECF01"),
+                    PersonName = "Jessee",
+                    Email = "siddenden2@illinois.edu",
+                    DateOfBirth = DateTime.Parse("2001-5-3"),
+                    Gender = "Male",
+                    Address = "13 Lien Center",
+                    ReceiveNewsLetters = false,
+                    CountryId = Guid.Parse("79803FF6-D5B5-4EFA-B62C-C8E7A6E21EE1")
+                });
+                _persons.Add(new Person()
+                {
+                    PersonId = Guid.Parse("F353BC8B-0967-4975-AA56-3311954241FC"),
+                    PersonName = "Yancy",
+                    Email = "ysealand4@cloudflare.com",
+                    DateOfBirth = DateTime.Parse("1996-10-11"),
+                    Gender = "Female",
+                    Address = "13 Lien Center",
+                    ReceiveNewsLetters = true,
+                    CountryId = Guid.Parse("01C863A3-1381-4902-85C6-6F62A0C1AA6B")
+                });
+                _persons.Add(new Person()
+                {
+                    PersonId = Guid.Parse("1A183779-207B-4D42-BBB6-2AE6D42F0BF3"),
+                    PersonName = "Deni",
+                    Email = "dreynoollds5@creativecommons.org",
+                    DateOfBirth = DateTime.Parse("1988-4-2"),
+                    Gender = "Female",
+                    Address = "13 Lien Center",
+                    ReceiveNewsLetters = true,
+                    CountryId = Guid.Parse("C236D156-0B30-4148-AAF2-70E5DE6FF787")
+                });
+            }
         }
 
         private PersonResponse ConvertPersonToPersonResponse(Person person)
@@ -99,7 +170,7 @@ namespace Services
                 case nameof(Person.Gender):
                     matchingPersons = allPersons.Where(temp =>
                     (!string.IsNullOrEmpty(temp.Gender) ?
-                    temp.Gender.Contains(searchString, StringComparison.OrdinalIgnoreCase) : true)).ToList();
+                    temp.Gender.Equals(searchString, StringComparison.OrdinalIgnoreCase) : true)).ToList();
                     break;
                 case nameof(Person.CountryId):
                     matchingPersons = allPersons.Where(temp =>
