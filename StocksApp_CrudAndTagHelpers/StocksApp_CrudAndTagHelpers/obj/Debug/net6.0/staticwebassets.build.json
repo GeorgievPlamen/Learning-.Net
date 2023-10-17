@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "8iSSYssGekulAqSKl7SUVv/U9HzZhqlSpWvRMORidNw=",
+  "Source": "StocksApp_CrudAndTagHelpers",
+  "BasePath": "_content/StocksApp_CrudAndTagHelpers",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "StocksApp_CrudAndTagHelpers\\wwwroot",
+      "Source": "StocksApp_CrudAndTagHelpers",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\StocksApp_CrudAndTagHelpers\\wwwroot\\",
+      "BasePath": "_content/StocksApp_CrudAndTagHelpers",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\StocksApp_CrudAndTagHelpers\\wwwroot\\StyleSheet.css",
+      "SourceId": "StocksApp_CrudAndTagHelpers",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\StocksApp_CrudAndTagHelpers\\wwwroot\\",
+      "BasePath": "_content/StocksApp_CrudAndTagHelpers",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ]
+}

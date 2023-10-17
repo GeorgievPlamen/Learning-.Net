@@ -9,7 +9,7 @@ namespace Tests
 {
     public class StockServiceTest
     {
-        private readonly IStocksService _stocksService = new StockService();
+        private readonly IStocksService _stocksService;
 
         public StockServiceTest()
         {

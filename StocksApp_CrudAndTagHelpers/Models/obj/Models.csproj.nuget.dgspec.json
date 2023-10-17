@@ -1,0 +1,181 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\Models\\Models.csproj": {}
+  },
+  "projects": {
+    "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\Enteties\\Enteties.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\Enteties\\Enteties.csproj",
+        "projectName": "Enteties",
+        "projectPath": "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\Enteties\\Enteties.csproj",
+        "packagesPath": "C:\\Users\\GRIGS\\.nuget\\packages\\",
+        "outputPath": "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\Enteties\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\GRIGS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\Models\\Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\Models\\Models.csproj",
+        "projectName": "Models",
+        "projectPath": "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\GRIGS\\.nuget\\packages\\",
+        "outputPath": "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\GRIGS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\ServicesContracts\\ServicesContracts.csproj": {
+                "projectPath": "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\ServicesContracts\\ServicesContracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\ServicesContracts\\ServicesContracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\ServicesContracts\\ServicesContracts.csproj",
+        "projectName": "ServicesContracts",
+        "projectPath": "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\ServicesContracts\\ServicesContracts.csproj",
+        "packagesPath": "C:\\Users\\GRIGS\\.nuget\\packages\\",
+        "outputPath": "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\ServicesContracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\GRIGS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\Enteties\\Enteties.csproj": {
+                "projectPath": "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\Enteties\\Enteties.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

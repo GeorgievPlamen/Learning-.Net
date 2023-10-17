@@ -1,0 +1,11 @@
+D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\Enteties\bin\Debug\net6.0\Enteties.deps.json
+D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\Enteties\bin\Debug\net6.0\Enteties.dll
+D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\Enteties\bin\Debug\net6.0\Enteties.pdb
+D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\Enteties\obj\Debug\net6.0\Enteties.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\Enteties\obj\Debug\net6.0\Enteties.AssemblyInfoInputs.cache
+D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\Enteties\obj\Debug\net6.0\Enteties.AssemblyInfo.cs
+D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\Enteties\obj\Debug\net6.0\Enteties.csproj.CoreCompileInputs.cache
+D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\Enteties\obj\Debug\net6.0\Enteties.dll
+D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\Enteties\obj\Debug\net6.0\refint\Enteties.dll
+D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\Enteties\obj\Debug\net6.0\Enteties.pdb
+D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\Enteties\obj\Debug\net6.0\ref\Enteties.dll
