@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PbnX/n4QhSrO8NjNmeh/QP0MFT0pIg44NYkJox5rX7C5oK/KexAxNOVEr6z862qUsv808PX+FdBMbUv0NJHIng==",
+  "dgSpecHash": "VN4YXd3W50y3KkIXwTbgLrkmCZkZVOE3gR5NhuRKXampi0gfKhBaEF3yUpU4sR1JBaAfI2Q14bhl9pAd3AR0Qw==",
   "success": true,
   "projectFilePath": "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\StocksApp_CrudAndTagHelpers\\StocksApp_CrudAndTagHelpers.csproj",
   "expectedPackageFiles": [

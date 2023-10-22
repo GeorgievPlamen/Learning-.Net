@@ -7,8 +7,19 @@
     <link href="~/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
-    <div>
-        @RenderBody()
+    <div class="page-content">
+        <header class="header">
+            <h1>Stocks</h1>
+            <nav class="navbar">
+                <ul class="list">
+                    <li class="link-hover"><a asp-controller="Home" asp-action="Index">Trade</a></li>
+                    <li class="link-hover"><a asp-controller="Home" asp-action="Orders">Orders</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            @RenderBody()
+        </main>
     </div>
 </body>
 </html>

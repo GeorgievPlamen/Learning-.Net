@@ -362,6 +362,19 @@
           "bin/placeholder/Enteties.dll": {}
         }
       },
+      "Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ServicesContracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
+        }
+      },
       "Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -922,6 +935,11 @@
       "path": "../Enteties/Enteties.csproj",
       "msbuildProject": "../Enteties/Enteties.csproj"
     },
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
+    },
     "Services/1.0.0": {
       "type": "project",
       "path": "../Services/Services.csproj",
@@ -935,6 +953,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Models >= 1.0.0",
       "Services >= 1.0.0",
       "ServicesContracts >= 1.0.0"
     ]
@@ -966,6 +985,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\Models\\Models.csproj": {
+              "projectPath": "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\Models\\Models.csproj"
+            },
             "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\ServicesContracts\\ServicesContracts.csproj": {
               "projectPath": "D:\\Coding\\CSharp\\NetCore\\StocksApp_CrudAndTagHelpers\\ServicesContracts\\ServicesContracts.csproj"
             },

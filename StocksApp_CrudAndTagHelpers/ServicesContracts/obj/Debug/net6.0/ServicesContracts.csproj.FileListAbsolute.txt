@@ -9,3 +9,7 @@ D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\ServicesContracts\obj\Debug
 D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\ServicesContracts\obj\Debug\net6.0\refint\ServicesContracts.dll
 D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\ServicesContracts\obj\Debug\net6.0\ServicesContracts.pdb
 D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\ServicesContracts\obj\Debug\net6.0\ref\ServicesContracts.dll
+D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\ServicesContracts\bin\Debug\net6.0\Enteties.dll
+D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\ServicesContracts\bin\Debug\net6.0\Enteties.pdb
+D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\ServicesContracts\obj\Debug\net6.0\ServicesContracts.csproj.AssemblyReference.cache
+D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\ServicesContracts\obj\Debug\net6.0\ServicesContracts.csproj.CopyComplete

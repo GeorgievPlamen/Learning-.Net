@@ -1,0 +1,44 @@
+﻿@model Orders
+
+<section class="flex">
+    <div class="flex-1">
+        <h3>Buy Orders</h3>
+        @if (Model.BuyOrders != null)
+        {
+            foreach (BuyOrderResponse buyOrder in Model.BuyOrders)
+            {
+                <div>
+                    <p>@buyOrder.StockName</p>
+                    <br>
+                    <p>@buyOrder.StockSymbol</p>
+                    <br>
+                    <p>@buyOrder.Quantity shares at @buyOrder.Price</p>
+                    <br>
+                    <p>Trade Amount: @buyOrder.TradeAmount</p>
+                    <br>
+                    <p>@buyOrder.DateAndTimeOfOrder</p>
+                </div>
+            }
+        }
+    </div>
+    <div class="flex-2">
+        <h3>Sell Orders</h3>
+        @if (Model.SellOrders != null)
+        {
+            foreach (SellOrderResponse sellOrder in Model.SellOrders)
+            {
+                <div>
+                    <p>@sellOrder.StockName</p>
+                    <br>
+                    <p>@sellOrder.StockSymbol</p>
+                    <br>
+                    <p>@sellOrder.Quantity shares at @sellOrder.Price</p>
+                    <br>
+                    <p>Trade Amount: @sellOrder.TradeAmount</p>
+                    <br>
+                    <p>@sellOrder.DateAndTimeOfOrder</p>
+                </div>
+            }
+        }
+    </div>
+</section>

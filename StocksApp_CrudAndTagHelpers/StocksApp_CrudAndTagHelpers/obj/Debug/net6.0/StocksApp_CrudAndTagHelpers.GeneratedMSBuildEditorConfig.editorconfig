@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\StocksApp_CrudAndTagHelpers
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Coding/CSharp/NetCore/StocksApp_CrudAndTagHelpers/StocksApp_CrudAndTagHelpers/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/CSharp/NetCore/StocksApp_CrudAndTagHelpers/StocksApp_CrudAndTagHelpers/Views/Home/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPcmRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Coding/CSharp/NetCore/StocksApp_CrudAndTagHelpers/StocksApp_CrudAndTagHelpers/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

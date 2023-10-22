@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "StocksApp_CrudAndTagHelpers/1.0.0": {
         "dependencies": {
+          "Models": "1.0.0",
           "Services": "1.0.0",
           "ServicesContracts": "1.0.0"
         },
@@ -172,6 +173,14 @@
           "Enteties.dll": {}
         }
       },
+      "Models/1.0.0": {
+        "dependencies": {
+          "ServicesContracts": "1.0.0"
+        },
+        "runtime": {
+          "Models.dll": {}
+        }
+      },
       "Services/1.0.0": {
         "dependencies": {
           "Enteties": "1.0.0",
@@ -185,6 +194,9 @@
         }
       },
       "ServicesContracts/1.0.0": {
+        "dependencies": {
+          "Enteties": "1.0.0"
+        },
         "runtime": {
           "ServicesContracts.dll": {}
         }
@@ -324,6 +336,11 @@
       "hashPath": "system.text.json.6.0.0.nupkg.sha512"
     },
     "Enteties/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

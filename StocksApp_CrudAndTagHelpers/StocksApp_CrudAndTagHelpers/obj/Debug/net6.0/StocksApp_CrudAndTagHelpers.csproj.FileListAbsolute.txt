@@ -43,3 +43,5 @@ D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\StocksApp_CrudAndTagHelpers
 D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\StocksApp_CrudAndTagHelpers\obj\Debug\net6.0\StocksApp_CrudAndTagHelpers.pdb
 D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\StocksApp_CrudAndTagHelpers\obj\Debug\net6.0\StocksApp_CrudAndTagHelpers.genruntimeconfig.cache
 D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\StocksApp_CrudAndTagHelpers\obj\Debug\net6.0\ref\StocksApp_CrudAndTagHelpers.dll
+D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\StocksApp_CrudAndTagHelpers\bin\Debug\net6.0\Models.dll
+D:\Coding\CSharp\NetCore\StocksApp_CrudAndTagHelpers\StocksApp_CrudAndTagHelpers\bin\Debug\net6.0\Models.pdb

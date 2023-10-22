@@ -1,0 +1,22 @@
+﻿@model StockTrade
+
+<section class="flex">
+    <form asp-controller="Home" method="post">
+    <div class="flex-1">
+            <label asp-for="StockName"><h3>@Model.StockName</h3></label>
+            <input type="hidden" asp-for="StockName"/>
+            <label asp-for="StockSymbol"><h3>@Model.StockSymbol</h3></label>
+            <input type="hidden" asp-for="StockSymbol" />
+            <label asp-for="Price"><p>$ @Model.Price</p></label>
+            <input type="hidden" asp-for="Price" />
+    </div>
+    <div class="flex-2">
+        <h5>New Order</h5>
+            <label asp-for="Quantity">Quantity:</label>
+            <input asp-for="Quantity" type="number"/>
+            <button type="submit" asp-action="BuyOrder">Buy</button>
+            <button type="submit" asp-action="SellOrder">Sell</button>
+    </div>
+    </form>
+
+</section>

@@ -6,6 +6,7 @@ using ServiceContracts.DTO;
 using Services;
 using Xunit.Abstractions;
 using ServiceContracts.Enums;
+using Microsoft.EntityFrameworkCore;
 
 namespace TestsX
 {
@@ -17,8 +18,9 @@ namespace TestsX
 
         public PersonsServiceTest(ITestOutputHelper testOutputHelper)
         {
-            _personService = new PersonService();
-            _countriesService = new CountriesService(false);
+            _countriesService = new CountriesService(new PersonsDbContext(new DbContextOptionsBuilder<PersonsDbContext>().Options));
+            _personService = new PersonService(new PersonsDbContext(new DbContextOptionsBuilder<PersonsDbContext>().Options),_countriesService);
+
             _outputHelper = testOutputHelper;
         }
 
@@ -118,9 +120,9 @@ namespace TestsX
                 ReceiveNewsLetters = false
             };
 
-            PersonResponse personResponse = _personService.AddPerson(personAddRequest);
+            PersonResponse? personResponse = _personService.AddPerson(personAddRequest);
 
-            PersonResponse personResponseFromGet = _personService.GetPersonByPersonId(personResponse.PersonId);
+            PersonResponse? personResponseFromGet = _personService.GetPersonByPersonId(personResponse.PersonId);
             //Assert
             Assert.Equal(personResponse, personResponseFromGet);
 
@@ -476,7 +478,7 @@ namespace TestsX
         public void UpdatePerson_NullPerson()
         {   
             //Arrange
-            PersonUpdateRequest personUpdateRequest = null;
+            PersonUpdateRequest? personUpdateRequest = null;
            
             //Assert
             Assert.Throws<ArgumentNullException>(() =>

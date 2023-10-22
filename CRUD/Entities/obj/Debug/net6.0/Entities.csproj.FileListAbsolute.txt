@@ -9,3 +9,6 @@ D:\Coding\CSharp\NetCore\CRUD\Entities\obj\Debug\net6.0\Entities.dll
 D:\Coding\CSharp\NetCore\CRUD\Entities\obj\Debug\net6.0\refint\Entities.dll
 D:\Coding\CSharp\NetCore\CRUD\Entities\obj\Debug\net6.0\Entities.pdb
 D:\Coding\CSharp\NetCore\CRUD\Entities\obj\Debug\net6.0\ref\Entities.dll
+D:\Coding\CSharp\NetCore\CRUD\Entities\bin\Debug\net6.0\Entities.runtimeconfig.json
+D:\Coding\CSharp\NetCore\CRUD\Entities\obj\Debug\net6.0\Entities.csproj.AssemblyReference.cache
+D:\Coding\CSharp\NetCore\CRUD\Entities\obj\Debug\net6.0\Entities.genruntimeconfig.cache

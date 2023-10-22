@@ -213,6 +213,9 @@
         }
       },
       "ServicesContracts/1.0.0": {
+        "dependencies": {
+          "Enteties": "1.0.0"
+        },
         "runtime": {
           "ServicesContracts.dll": {}
         }
