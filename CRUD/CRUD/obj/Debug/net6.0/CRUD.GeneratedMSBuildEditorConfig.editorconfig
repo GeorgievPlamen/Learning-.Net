@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Coding\CSharp\NetCore\CRUD\CRUD
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Coding/CSharp/NetCore/CRUD/CRUD/Views/Countries/UploadFromExcel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyaWVzXFVwbG9hZEZyb21FeGNlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Coding/CSharp/NetCore/CRUD/CRUD/Views/Persons/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -26,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Coding/CSharp/NetCore/CRUD/CRUD/Views/Persons/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/CSharp/NetCore/CRUD/CRUD/Views/Persons/ForPDF.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uc1xGb3JQREYuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Coding/CSharp/NetCore/CRUD/CRUD/Views/Persons/Index.cshtml]

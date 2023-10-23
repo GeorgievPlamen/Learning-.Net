@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "D:\\Coding\\CSharp\\NetCore\\CRUD\\CRUD\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
+      "PackagePath": "staticwebassets\\Rotativa\\wkhtmltopdf.exe"
+    },
+    {
       "Id": "D:\\Coding\\CSharp\\NetCore\\CRUD\\CRUD\\wwwroot\\Scripts\\jquery.min.js",
       "PackagePath": "staticwebassets\\Scripts\\jquery.min.js"
     },
@@ -15,6 +19,42 @@
     {
       "Id": "D:\\Coding\\CSharp\\NetCore\\CRUD\\CRUD\\wwwroot\\StyleSheet.css",
       "PackagePath": "staticwebassets\\StyleSheet.css"
+    },
+    {
+      "Id": "D:\\Coding\\CSharp\\NetCore\\CRUD\\CRUD\\wwwroot\\wkhtmltopdf\\bin\\wkhtmltoimage.exe",
+      "PackagePath": "staticwebassets\\wkhtmltopdf\\bin\\wkhtmltoimage.exe"
+    },
+    {
+      "Id": "D:\\Coding\\CSharp\\NetCore\\CRUD\\CRUD\\wwwroot\\wkhtmltopdf\\bin\\wkhtmltopdf.exe",
+      "PackagePath": "staticwebassets\\wkhtmltopdf\\bin\\wkhtmltopdf.exe"
+    },
+    {
+      "Id": "D:\\Coding\\CSharp\\NetCore\\CRUD\\CRUD\\wwwroot\\wkhtmltopdf\\bin\\wkhtmltox.dll",
+      "PackagePath": "staticwebassets\\wkhtmltopdf\\bin\\wkhtmltox.dll"
+    },
+    {
+      "Id": "D:\\Coding\\CSharp\\NetCore\\CRUD\\CRUD\\wwwroot\\wkhtmltopdf\\include\\wkhtmltox\\dllbegin.inc",
+      "PackagePath": "staticwebassets\\wkhtmltopdf\\include\\wkhtmltox\\dllbegin.inc"
+    },
+    {
+      "Id": "D:\\Coding\\CSharp\\NetCore\\CRUD\\CRUD\\wwwroot\\wkhtmltopdf\\include\\wkhtmltox\\dllend.inc",
+      "PackagePath": "staticwebassets\\wkhtmltopdf\\include\\wkhtmltox\\dllend.inc"
+    },
+    {
+      "Id": "D:\\Coding\\CSharp\\NetCore\\CRUD\\CRUD\\wwwroot\\wkhtmltopdf\\include\\wkhtmltox\\image.h",
+      "PackagePath": "staticwebassets\\wkhtmltopdf\\include\\wkhtmltox\\image.h"
+    },
+    {
+      "Id": "D:\\Coding\\CSharp\\NetCore\\CRUD\\CRUD\\wwwroot\\wkhtmltopdf\\include\\wkhtmltox\\pdf.h",
+      "PackagePath": "staticwebassets\\wkhtmltopdf\\include\\wkhtmltox\\pdf.h"
+    },
+    {
+      "Id": "D:\\Coding\\CSharp\\NetCore\\CRUD\\CRUD\\wwwroot\\wkhtmltopdf\\lib\\wkhtmltox.lib",
+      "PackagePath": "staticwebassets\\wkhtmltopdf\\lib\\wkhtmltox.lib"
+    },
+    {
+      "Id": "D:\\Coding\\CSharp\\NetCore\\CRUD\\CRUD\\wwwroot\\wkhtmltopdf\\uninstall.exe",
+      "PackagePath": "staticwebassets\\wkhtmltopdf\\uninstall.exe"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.CRUD.Microsoft.AspNetCore.StaticWebAssets.props",
