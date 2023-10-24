@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Coding\\CSharp\\NetCore\\StocksApp_EntityFramework\\StocksApp_EntityFramework\\wwwroot\\StyleSheet.css",
+      "PackagePath": "staticwebassets\\StyleSheet.css"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.StocksApp_EntityFramework.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.StocksApp_EntityFramework.props",
+      "PackagePath": "build\\StocksApp_EntityFramework.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.StocksApp_EntityFramework.props",
+      "PackagePath": "buildMultiTargeting\\StocksApp_EntityFramework.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.StocksApp_EntityFramework.props",
+      "PackagePath": "buildTransitive\\StocksApp_EntityFramework.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
