@@ -15,3 +15,5 @@ D:\Coding\CSharp\NetCore\CRUD\Services\obj\Debug\net6.0\Services.dll
 D:\Coding\CSharp\NetCore\CRUD\Services\obj\Debug\net6.0\refint\Services.dll
 D:\Coding\CSharp\NetCore\CRUD\Services\obj\Debug\net6.0\Services.pdb
 D:\Coding\CSharp\NetCore\CRUD\Services\obj\Debug\net6.0\ref\Services.dll
+D:\Coding\CSharp\NetCore\CRUD\Services\bin\Debug\net6.0\RepositoryContracts.dll
+D:\Coding\CSharp\NetCore\CRUD\Services\bin\Debug\net6.0\RepositoryContracts.pdb

@@ -87,3 +87,7 @@ D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\EPPlus.dll
 D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\EPPlus.Interfaces.dll
 D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\EPPlus.System.Drawing.dll
 D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\RepositoryContracts.dll
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\RepositoryContracts.pdb
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Repositories.dll
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Repositories.pdb

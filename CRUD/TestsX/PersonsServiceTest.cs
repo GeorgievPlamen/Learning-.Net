@@ -7,6 +7,9 @@ using Services;
 using Xunit.Abstractions;
 using ServiceContracts.Enums;
 using Microsoft.EntityFrameworkCore;
+using EntityFrameworkCoreMock;
+using AutoFixture;
+using FluentAssertions;
 
 namespace TestsX
 {
@@ -15,11 +18,24 @@ namespace TestsX
         private readonly IPersonService _personService;
         private readonly ICountriesService _countriesService;
         private readonly ITestOutputHelper _outputHelper;
+        private readonly IFixture _fixture;
 
         public PersonsServiceTest(ITestOutputHelper testOutputHelper)
         {
-            _countriesService = new CountriesService(new PersonsDbContext(new DbContextOptionsBuilder<PersonsDbContext>().Options));
-            _personService = new PersonService(new PersonsDbContext(new DbContextOptionsBuilder<PersonsDbContext>().Options),_countriesService);
+            _fixture = new Fixture();
+            var countriesInitialData = new List<Country>() { };
+            var personsInitialData = new List<Person>() { };
+
+            DbContextMock<ApplicationDbContext> dbContextMock = new DbContextMock<ApplicationDbContext>(
+                new DbContextOptionsBuilder<ApplicationDbContext>().Options);
+
+            var dbContext = dbContextMock.Object;
+            dbContextMock.CreateDbSetMock(temp => temp.Countries, countriesInitialData);
+            dbContextMock.CreateDbSetMock(temp => temp.Persons, personsInitialData);
+
+
+            _countriesService = new CountriesService(null);
+            _personService = new PersonService(null);
 
             _outputHelper = testOutputHelper;
         }
@@ -34,11 +50,15 @@ namespace TestsX
             PersonAddRequest? request = null;
          
             //Assert
-            await Assert.ThrowsAsync<ArgumentNullException>(async () =>
+            Func<Task> action = (async () =>
             {
                 //Act
                 await _personService.AddPerson(request);
             });
+
+            await action.Should().ThrowAsync<ArgumentNullException>();
+
+            //await Assert.ThrowsAsync<ArgumentNullException>
         }
 
         //When we supply PersonName as null, it should throw ArgumentNullException
@@ -46,43 +66,39 @@ namespace TestsX
         public async Task AddPerson_PersonNameIsNull()
         {
             //Arrange
-            PersonAddRequest? request = new PersonAddRequest()
-            {
-                PersonName = null
-            };
+            PersonAddRequest? request = _fixture.Build<PersonAddRequest>()
+                .With(temp => temp.PersonName, null as string)
+                .Create();
 
             //Assert
-            await Assert.ThrowsAsync<ArgumentException>(async() =>
+            Func<Task> action = async() =>
             {
                 //Act
                 await _personService.AddPerson(request);
-            });
+            };
+
+            await action.Should().ThrowAsync<ArgumentNullException>();
         }
 
         //Proper person details, it should insert the Person into the persons list
         // and it sohuld return an object PersonResponse, which includes the newly
         //generated person Id
         [Fact]
-        public async Task AddPerson_ProperPersonDetails()
+         public async Task AddPerson_ProperPersonDetails()
         {
             //Arrange
-            var request = new PersonAddRequest()
-            {
-                PersonName = "John Doe",
-                Email = "doe.John@email.com",
-                Address = "Middle of Nowhere",
-                CountryId = Guid.NewGuid(),
-                Gender = ServiceContracts.Enums.GenderOptions.Female,
-                DateOfBirth = DateTime.Parse("1999-10-10"),
-                ReceiveNewsLetters = true
-            };
+            var request = 
+                _fixture.Build<PersonAddRequest>()
+                .With(temp => temp.Email, "someone@example.com")
+                .Create();
             //Act
             PersonResponse personResponseFromAdd = await _personService.AddPerson(request);
-            List<PersonResponse> persons = await _personService.GetAllPersons(); 
+            List<PersonResponse> persons = await _personService.GetAllPersons();
             //Assert
-            Assert.True(personResponseFromAdd.PersonId != Guid.Empty);
-
-            Assert.Contains(personResponseFromAdd, persons);
+            //Assert.True(personResponseFromAdd.PersonId != Guid.Empty);
+            personResponseFromAdd.PersonId.Should().NotBe(Guid.Empty);
+            //Assert.Contains(personResponseFromAdd, persons);
+            persons.Should().Contain(personResponseFromAdd);
         }
         #endregion
         #region GetPersonPersonId
@@ -104,21 +120,13 @@ namespace TestsX
         public async Task GetPersonByPersonId_ValidPersonId()
         {
             //Arrange
-            CountryAddRequest country_request = new CountryAddRequest()
-            { CountryName = "Canada" };
+            CountryAddRequest country_request = _fixture.Create<CountryAddRequest>();
             CountryResponse countryResponse = await _countriesService.AddCountry(country_request);
 
             //Act
-            PersonAddRequest personAddRequest = new PersonAddRequest()
-            {
-                PersonName = "John Doe",
-                Email = "doe@email.com",
-                Address = "Middle of nowhere",
-                CountryId = countryResponse.CountryID,
-                DateOfBirth = DateTime.Parse("1999-01-01"),
-                Gender = ServiceContracts.Enums.GenderOptions.Male,
-                ReceiveNewsLetters = false
-            };
+            PersonAddRequest personAddRequest = _fixture.Build<PersonAddRequest>()
+                .With(temp => temp.Email, "someone@example.com")
+                .Create();
 
             PersonResponse? personResponse = await _personService.AddPerson(personAddRequest);
 
@@ -143,46 +151,23 @@ namespace TestsX
         public async Task GetAllPersons_AddFewPersons()
         {
             //Arrange
-            CountryAddRequest countryRequest1 = new CountryAddRequest()
-            { CountryName = "USA" };
-            CountryAddRequest countryRequest2 = new CountryAddRequest()
-            { CountryName = "Bulgaria" };
+            CountryAddRequest countryRequest1 = _fixture.Create<CountryAddRequest>();
+            CountryAddRequest countryRequest2 = _fixture.Create<CountryAddRequest>();
 
             CountryResponse countryResponse1 = await _countriesService.AddCountry(countryRequest1);
             CountryResponse countryResponse2 = await _countriesService.AddCountry(countryRequest2);
 
-            PersonAddRequest personRequest1 = new PersonAddRequest()
-            {
-                PersonName = "John",
-                Email = "John@email.com",
-                Gender = ServiceContracts.Enums.GenderOptions.Male,
-                Address = "john lives here",
-                CountryId = countryResponse1.CountryID,
-                DateOfBirth = DateTime.Parse("1999-02-02"),
-                ReceiveNewsLetters = true
-            };
+            PersonAddRequest personRequest1 = _fixture.Build<PersonAddRequest>()
+                .With(temp => temp.Email, "someone@example.com")
+                .Create();
 
-            PersonAddRequest personRequest2 = new PersonAddRequest()
-            {
-                PersonName = "Smith",
-                Email = "smith@email.com",
-                Gender = ServiceContracts.Enums.GenderOptions.Male,
-                Address = "smith lives here",
-                CountryId = countryResponse1.CountryID,
-                DateOfBirth = DateTime.Parse("2004-05-02"),
-                ReceiveNewsLetters = true
-            };
+            PersonAddRequest personRequest2 = _fixture.Build<PersonAddRequest>()
+                .With(temp => temp.Email, "someone@example.com")
+                .Create();
 
-            PersonAddRequest personRequest3 = new PersonAddRequest()
-            {
-                PersonName = "Jane",
-                Email = "jane@email.com",
-                Gender = ServiceContracts.Enums.GenderOptions.Female,
-                Address = "jane lives here",
-                CountryId = countryResponse2.CountryID,
-                DateOfBirth = DateTime.Parse("1996-12-10"),
-                ReceiveNewsLetters = true
-            };
+            PersonAddRequest personRequest3 = _fixture.Build<PersonAddRequest>()
+                .With(temp => temp.Email, "someone@example.com")
+                .Create();
 
             List<PersonAddRequest> personRequests = new List<PersonAddRequest>()
             { personRequest1, personRequest2, personRequest3 };
@@ -509,20 +494,12 @@ namespace TestsX
         public async Task UpdatePerson_PersonNameIsNull()
         {
             //Arrange
-            CountryAddRequest countryAddRequest = new CountryAddRequest()
-            { CountryName = "UK" };
+            CountryAddRequest countryAddRequest = _fixture.Create<CountryAddRequest>();
             CountryResponse countryResponse = await _countriesService.AddCountry(countryAddRequest);
 
-            PersonAddRequest personAddRequest = new PersonAddRequest()
-            {
-                PersonName = "John",
-                Email = "John@email.com",
-                Gender = ServiceContracts.Enums.GenderOptions.Male,
-                Address = "john lives here",
-                CountryId = countryResponse.CountryID,
-                DateOfBirth = DateTime.Parse("1999-02-02"),
-                ReceiveNewsLetters = true
-            };
+            PersonAddRequest personAddRequest = _fixture.Build<PersonAddRequest>()
+                .With(temp => temp.Email, "someone@example.com")
+                .Create();
 
             PersonResponse personResponseFromAdd = await _personService.AddPerson(personAddRequest);
 
@@ -542,20 +519,12 @@ namespace TestsX
         public async Task UpdatePerson_PersonFullDetails()
         {
             //Arrange
-            CountryAddRequest countryAddRequest = new CountryAddRequest()
-            { CountryName = "UK" };
+            CountryAddRequest countryAddRequest = _fixture.Create<CountryAddRequest>();
             CountryResponse countryResponse = await _countriesService.AddCountry(countryAddRequest);
 
-            PersonAddRequest personAddRequest = new PersonAddRequest()
-            {
-                PersonName = "John",
-                Email = "John@email.com",
-                Gender = ServiceContracts.Enums.GenderOptions.Male,
-                Address = "john lives here",
-                CountryId = countryResponse.CountryID,
-                DateOfBirth = DateTime.Parse("1999-02-02"),
-                ReceiveNewsLetters = true
-            };
+            PersonAddRequest personAddRequest = _fixture.Build<PersonAddRequest>()
+                .With(temp => temp.Email, "someone@example.com")
+                .Create();
 
             PersonResponse personResponseFromAdd = await _personService.AddPerson(personAddRequest);
 
@@ -577,20 +546,12 @@ namespace TestsX
         public async Task DeletePerson_ValidPersonId()
         {
             //Arrange
-            CountryAddRequest countryAddRequest = new CountryAddRequest()
-            { CountryName = "UK" };
+            CountryAddRequest countryAddRequest = _fixture.Create<CountryAddRequest>();
             CountryResponse countryResponse = await _countriesService.AddCountry(countryAddRequest);
 
-            PersonAddRequest personAddRequest = new PersonAddRequest()
-            {
-                PersonName = "John",
-                Email = "John@email.com",
-                Gender = ServiceContracts.Enums.GenderOptions.Male,
-                Address = "john lives here",
-                CountryId = countryResponse.CountryID,
-                DateOfBirth = DateTime.Parse("1999-02-02"),
-                ReceiveNewsLetters = true
-            };
+            PersonAddRequest personAddRequest = _fixture.Build<PersonAddRequest>()
+                .With(temp => temp.Email, "someone@example.com")
+                .Create();
 
             PersonResponse personResponseFromAdd = await _personService.AddPerson(personAddRequest);
 
@@ -610,16 +571,9 @@ namespace TestsX
             { CountryName = "UK" };
             CountryResponse countryResponse = await _countriesService.AddCountry(countryAddRequest);
 
-            PersonAddRequest personAddRequest = new PersonAddRequest()
-            {
-                PersonName = "John",
-                Email = "John@email.com",
-                Gender = ServiceContracts.Enums.GenderOptions.Male,
-                Address = "john lives here",
-                CountryId = countryResponse.CountryID,
-                DateOfBirth = DateTime.Parse("1999-02-02"),
-                ReceiveNewsLetters = true
-            };
+            PersonAddRequest personAddRequest = _fixture.Build<PersonAddRequest>()
+                .With(temp => temp.Email, "someone@example.com")
+                .Create();
 
             PersonResponse personResponseFromAdd = await _personService.AddPerson(personAddRequest);
 

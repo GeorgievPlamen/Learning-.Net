@@ -1,0 +1,17 @@
+D:\Coding\CSharp\NetCore\CRUD\Repositories\bin\Debug\net6.0\Repositories.deps.json
+D:\Coding\CSharp\NetCore\CRUD\Repositories\bin\Debug\net6.0\Repositories.dll
+D:\Coding\CSharp\NetCore\CRUD\Repositories\bin\Debug\net6.0\Repositories.pdb
+D:\Coding\CSharp\NetCore\CRUD\Repositories\bin\Debug\net6.0\Entities.dll
+D:\Coding\CSharp\NetCore\CRUD\Repositories\bin\Debug\net6.0\RepositoryContracts.dll
+D:\Coding\CSharp\NetCore\CRUD\Repositories\bin\Debug\net6.0\Entities.pdb
+D:\Coding\CSharp\NetCore\CRUD\Repositories\bin\Debug\net6.0\RepositoryContracts.pdb
+D:\Coding\CSharp\NetCore\CRUD\Repositories\obj\Debug\net6.0\Repositories.csproj.AssemblyReference.cache
+D:\Coding\CSharp\NetCore\CRUD\Repositories\obj\Debug\net6.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\CSharp\NetCore\CRUD\Repositories\obj\Debug\net6.0\Repositories.AssemblyInfoInputs.cache
+D:\Coding\CSharp\NetCore\CRUD\Repositories\obj\Debug\net6.0\Repositories.AssemblyInfo.cs
+D:\Coding\CSharp\NetCore\CRUD\Repositories\obj\Debug\net6.0\Repositories.csproj.CoreCompileInputs.cache
+D:\Coding\CSharp\NetCore\CRUD\Repositories\obj\Debug\net6.0\Repositories.csproj.CopyComplete
+D:\Coding\CSharp\NetCore\CRUD\Repositories\obj\Debug\net6.0\Repositories.dll
+D:\Coding\CSharp\NetCore\CRUD\Repositories\obj\Debug\net6.0\refint\Repositories.dll
+D:\Coding\CSharp\NetCore\CRUD\Repositories\obj\Debug\net6.0\Repositories.pdb
+D:\Coding\CSharp\NetCore\CRUD\Repositories\obj\Debug\net6.0\ref\Repositories.dll
