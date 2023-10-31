@@ -10,6 +10,8 @@ using Microsoft.EntityFrameworkCore;
 using EntityFrameworkCoreMock;
 using AutoFixture;
 using FluentAssertions;
+using RepositoryContracts;
+using Moq;
 
 namespace TestsX
 {
@@ -17,12 +19,17 @@ namespace TestsX
     {
         private readonly IPersonService _personService;
         private readonly ICountriesService _countriesService;
+        private readonly Mock<IPersonsRepository> _personsRepositoryMock;
+        private readonly IPersonsRepository _presonsRepository;
         private readonly ITestOutputHelper _outputHelper;
         private readonly IFixture _fixture;
 
         public PersonsServiceTest(ITestOutputHelper testOutputHelper)
         {
             _fixture = new Fixture();
+            _personsRepositoryMock = new Mock<IPersonsRepository>();
+            _presonsRepository = _personsRepositoryMock.Object;
+
             var countriesInitialData = new List<Country>() { };
             var personsInitialData = new List<Person>() { };
 
@@ -35,7 +42,7 @@ namespace TestsX
 
 
             _countriesService = new CountriesService(null);
-            _personService = new PersonService(null);
+            _personService = new PersonService(_presonsRepository);
 
             _outputHelper = testOutputHelper;
         }
@@ -70,6 +77,10 @@ namespace TestsX
                 .With(temp => temp.PersonName, null as string)
                 .Create();
 
+            Person person = request.ToPerson();
+
+            _personsRepositoryMock.Setup(temp => temp.AddPerson(It.IsAny<Person>())).ReturnsAsync(person);
+
             //Assert
             Func<Task> action = async() =>
             {
@@ -84,21 +95,27 @@ namespace TestsX
         // and it sohuld return an object PersonResponse, which includes the newly
         //generated person Id
         [Fact]
-         public async Task AddPerson_ProperPersonDetails()
+         public async Task AddPerson_FullPersonDetails_ToBeSuccessful()
         {
             //Arrange
             var request = 
                 _fixture.Build<PersonAddRequest>()
                 .With(temp => temp.Email, "someone@example.com")
                 .Create();
+
+            Person person = request.ToPerson();
+            PersonResponse person_response_expected = person.ToPersonResponse();
+
+            //If we supply any argument value, it should return the same value
+            _personsRepositoryMock.Setup(
+                temp => temp.AddPerson(It.IsAny<Person>()))
+                .ReturnsAsync(person);
+
             //Act
             PersonResponse personResponseFromAdd = await _personService.AddPerson(request);
-            List<PersonResponse> persons = await _personService.GetAllPersons();
             //Assert
             //Assert.True(personResponseFromAdd.PersonId != Guid.Empty);
             personResponseFromAdd.PersonId.Should().NotBe(Guid.Empty);
-            //Assert.Contains(personResponseFromAdd, persons);
-            persons.Should().Contain(personResponseFromAdd);
         }
         #endregion
         #region GetPersonPersonId
@@ -120,20 +137,20 @@ namespace TestsX
         public async Task GetPersonByPersonId_ValidPersonId()
         {
             //Arrange
-            CountryAddRequest country_request = _fixture.Create<CountryAddRequest>();
-            CountryResponse countryResponse = await _countriesService.AddCountry(country_request);
-
-            //Act
-            PersonAddRequest personAddRequest = _fixture.Build<PersonAddRequest>()
+            Person personRequest = _fixture.Build<Person>()
                 .With(temp => temp.Email, "someone@example.com")
                 .Create();
+            PersonResponse person_response_expected = personRequest.ToPersonResponse();
 
-            PersonResponse? personResponse = await _personService.AddPerson(personAddRequest);
+            _personsRepositoryMock.Setup(temp =>
+            temp.GetPersonByPersonID(It.IsAny<Guid>()))
+                .ReturnsAsync(personRequest);
+            //Act
 
-            PersonResponse? personResponseFromGet = await _personService.GetPersonByPersonId(personResponse.PersonId);
+
+            PersonResponse? personResponseFromGet = await _personService.GetPersonByPersonId(personRequest.PersonId);
             //Assert
-            Assert.Equal(personResponse, personResponseFromGet);
-
+            personResponseFromGet.Should().Be(person_response_expected);
         }
         #endregion
         #region GetAllPersons
@@ -141,6 +158,12 @@ namespace TestsX
         [Fact]
         public async Task GetAllPersons_EmptyList()
         {
+            //Arrange
+            var persons = new List<Person>();
+            _personsRepositoryMock.Setup(temp =>
+            temp.GetAllPersons())
+                .ReturnsAsync(persons);
+
             List<PersonResponse> personsFromGet = await _personService.GetAllPersons();
 
             Assert.Empty(personsFromGet);
