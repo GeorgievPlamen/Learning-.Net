@@ -76,7 +76,6 @@ D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.L
 D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
 D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
 D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Microsoft.CodeAnalysis.Razor.dll
-D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
 D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
@@ -91,3 +90,16 @@ D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\RepositoryContracts.dll
 D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\RepositoryContracts.pdb
 D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Repositories.dll
 D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Repositories.pdb
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Serilog.dll
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Serilog.AspNetCore.dll
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Serilog.Sinks.File.dll
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Microsoft.Azure.Services.AppAuthentication.dll
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Serilog.Sinks.MSSqlServer.dll
+D:\Coding\CSharp\NetCore\CRUD\CRUD\bin\Debug\net6.0\Serilog.Sinks.PeriodicBatching.dll

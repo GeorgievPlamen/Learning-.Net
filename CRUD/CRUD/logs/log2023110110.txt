@@ -1,0 +1,114 @@
+2023-11-01 10:12:35.318 +02:00 [INF] User profile is available. Using 'C:\Users\GRIGS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-01 10:12:35.410 +02:00 [INF] Now listening on: http://localhost:5174
+2023-11-01 10:12:35.412 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-01 10:12:35.413 +02:00 [INF] Hosting environment: Development
+2023-11-01 10:12:35.413 +02:00 [INF] Content root path: D:\Coding\CSharp\NetCore\CRUD\CRUD\
+2023-11-01 10:12:36.334 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/ - -
+2023-11-01 10:12:36.368 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /
+2023-11-01 10:12:36.390 +02:00 [INF] Executing endpoint 'CRUD.Controllers.PersonsController.Index (CRUD)'
+2023-11-01 10:12:36.425 +02:00 [INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContracts.Enums.SortOrderOptions) on controller CRUD.Controllers.PersonsController (CRUD).
+2023-11-01 10:12:36.566 +02:00 [INF] Index action method of PersonsController
+2023-11-01 10:12:36.600 +02:00 [INF] GetFilteredPersons of PersonService
+2023-11-01 10:12:36.601 +02:00 [INF] GetAllPersons of PersonService
+2023-11-01 10:12:37.262 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2023-11-01 10:12:38.588 +02:00 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[PersonName], [p].[ReceiveNewsLetters], [p].[TaxIdentificationNumber], [c].[CountryId], [c].[CountryName]
+FROM [Persons] AS [p]
+INNER JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[CountryId]
+2023-11-01 10:12:38.691 +02:00 [INF] GetSortedPersons of PersonService
+2023-11-01 10:12:38.702 +02:00 [INF] Executing ViewResult, running view Index.
+2023-11-01 10:12:38.867 +02:00 [INF] Executed ViewResult - view Index executed in 164.4367ms.
+2023-11-01 10:12:38.872 +02:00 [INF] Executed action CRUD.Controllers.PersonsController.Index (CRUD) in 2445.8133ms
+2023-11-01 10:12:38.873 +02:00 [INF] Executed endpoint 'CRUD.Controllers.PersonsController.Index (CRUD)'
+2023-11-01 10:12:38.875 +02:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+Date: Wed, 01 Nov 2023 08:12:38 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+2023-11-01 10:12:38.900 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/ - - - 200 - text/html;+charset=utf-8 2568.3144ms
+2023-11-01 10:12:38.912 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/_framework/aspnetcore-browser-refresh.js - -
+2023-11-01 10:12:38.913 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/_vs/browserLink - -
+2023-11-01 10:12:38.914 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/_framework/aspnetcore-browser-refresh.js - - - 200 12340 application/javascript;+charset=utf-8 2.7946ms
+2023-11-01 10:12:38.925 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 12.2528ms
+2023-11-01 10:18:22.801 +02:00 [INF] User profile is available. Using 'C:\Users\GRIGS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-01 10:18:22.893 +02:00 [INF] Now listening on: http://localhost:5174
+2023-11-01 10:18:22.895 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-01 10:18:22.895 +02:00 [INF] Hosting environment: Development
+2023-11-01 10:18:22.895 +02:00 [INF] Content root path: D:\Coding\CSharp\NetCore\CRUD\CRUD\
+2023-11-01 10:18:23.281 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/ - -
+2023-11-01 10:18:23.310 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /
+2023-11-01 10:18:23.332 +02:00 [INF] Executing endpoint 'CRUD.Controllers.PersonsController.Index (CRUD)'
+2023-11-01 10:18:23.374 +02:00 [INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContracts.Enums.SortOrderOptions) on controller CRUD.Controllers.PersonsController (CRUD).
+2023-11-01 10:18:23.519 +02:00 [INF] Index action method of PersonsController
+2023-11-01 10:18:23.550 +02:00 [INF] GetFilteredPersons of PersonService
+2023-11-01 10:18:23.550 +02:00 [INF] GetAllPersons of PersonService
+2023-11-01 10:18:24.216 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2023-11-01 10:18:24.911 +02:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[PersonName], [p].[ReceiveNewsLetters], [p].[TaxIdentificationNumber], [c].[CountryId], [c].[CountryName]
+FROM [Persons] AS [p]
+INNER JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[CountryId]
+2023-11-01 10:18:25.016 +02:00 [INF] GetSortedPersons of PersonService
+2023-11-01 10:18:25.027 +02:00 [INF] Executing ViewResult, running view Index.
+2023-11-01 10:18:25.191 +02:00 [INF] Executed ViewResult - view Index executed in 163.6806ms.
+2023-11-01 10:18:25.195 +02:00 [INF] Executed action CRUD.Controllers.PersonsController.Index (CRUD) in 1820.1153ms
+2023-11-01 10:18:25.196 +02:00 [INF] Executed endpoint 'CRUD.Controllers.PersonsController.Index (CRUD)'
+2023-11-01 10:18:25.198 +02:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+Date: Wed, 01 Nov 2023 08:18:24 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+2023-11-01 10:18:25.222 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/ - - - 200 - text/html;+charset=utf-8 1944.0575ms
+2023-11-01 10:18:25.234 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/_vs/browserLink - -
+2023-11-01 10:18:25.235 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/_framework/aspnetcore-browser-refresh.js - -
+2023-11-01 10:18:25.239 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/_framework/aspnetcore-browser-refresh.js - - - 200 12340 application/javascript;+charset=utf-8 3.4237ms
+2023-11-01 10:18:25.253 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.5679ms
+2023-11-01 10:21:04.042 +02:00 [INF] User profile is available. Using 'C:\Users\GRIGS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-01 10:21:04.163 +02:00 [INF] Now listening on: http://localhost:5174
+2023-11-01 10:21:04.166 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-01 10:21:04.166 +02:00 [INF] Hosting environment: Development
+2023-11-01 10:21:04.166 +02:00 [INF] Content root path: D:\Coding\CSharp\NetCore\CRUD\CRUD\
+2023-11-01 10:21:04.838 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/ - -
+2023-11-01 10:21:04.862 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /
+2023-11-01 10:21:04.881 +02:00 [INF] Executing endpoint 'CRUD.Controllers.PersonsController.Index (CRUD)'
+2023-11-01 10:21:04.916 +02:00 [INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContracts.Enums.SortOrderOptions) on controller CRUD.Controllers.PersonsController (CRUD).
+2023-11-01 10:21:05.046 +02:00 [INF] Index action method of PersonsController
+2023-11-01 10:21:05.074 +02:00 [INF] GetFilteredPersons of PersonService
+2023-11-01 10:21:05.075 +02:00 [INF] GetAllPersons of PersonService
+2023-11-01 10:21:05.728 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2023-11-01 10:21:06.139 +02:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[PersonName], [p].[ReceiveNewsLetters], [p].[TaxIdentificationNumber], [c].[CountryId], [c].[CountryName]
+FROM [Persons] AS [p]
+INNER JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[CountryId]
+2023-11-01 10:21:06.231 +02:00 [INF] GetSortedPersons of PersonService
+2023-11-01 10:21:06.242 +02:00 [INF] Executing ViewResult, running view Index.
+2023-11-01 10:21:06.405 +02:00 [INF] Executed ViewResult - view Index executed in 162.064ms.
+2023-11-01 10:21:06.409 +02:00 [INF] Executed action CRUD.Controllers.PersonsController.Index (CRUD) in 1492.3148ms
+2023-11-01 10:21:06.410 +02:00 [INF] Executed endpoint 'CRUD.Controllers.PersonsController.Index (CRUD)'
+2023-11-01 10:21:06.412 +02:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+Date: Wed, 01 Nov 2023 08:21:06 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+2023-11-01 10:21:06.435 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/ - - - 200 - text/html;+charset=utf-8 1599.7810ms
+2023-11-01 10:21:06.447 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/_vs/browserLink - -
+2023-11-01 10:21:06.448 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/_framework/aspnetcore-browser-refresh.js - -
+2023-11-01 10:21:06.453 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/_framework/aspnetcore-browser-refresh.js - - - 200 12340 application/javascript;+charset=utf-8 4.5194ms
+2023-11-01 10:21:06.457 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.6774ms

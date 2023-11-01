@@ -24,7 +24,7 @@ namespace TestsX
         private readonly ITestOutputHelper _outputHelper;
         private readonly IFixture _fixture;
 
-        public PersonsServiceTest(ITestOutputHelper testOutputHelper)
+        /*public PersonsServiceTest(ITestOutputHelper testOutputHelper)
         {
             _fixture = new Fixture();
             _personsRepositoryMock = new Mock<IPersonsRepository>();
@@ -45,7 +45,7 @@ namespace TestsX
             _personService = new PersonService(_presonsRepository);
 
             _outputHelper = testOutputHelper;
-        }
+        }*/
 
         #region AddPerson
         //When we supply null value as PersonAddRequest, It should throw
