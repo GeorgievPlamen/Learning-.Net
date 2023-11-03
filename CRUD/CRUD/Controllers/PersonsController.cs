@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CRUD.Filters.ActionFilters;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Rotativa.AspNetCore;
 using ServiceContracts;
@@ -8,6 +9,7 @@ using ServiceContracts.Enums;
 namespace CRUD.Controllers
 {
     [Route("[controller]")]
+    [TypeFilter(typeof(ResponseHeaderActionFilter), Arguments = new object[] {"my-class-key","my-class-value"}, Order = 2)]
     public class PersonsController : Controller
     {
         private readonly IPersonService _personService;
@@ -19,9 +21,11 @@ namespace CRUD.Controllers
             _countriesService = countriesService;
             _logger = logger;
         }
-
+         
         [Route("/")]
         [Route("index")]
+        [TypeFilter(typeof(PersonsListActionFilter))]
+        [TypeFilter(typeof(ResponseHeaderActionFilter), Arguments = new object[] {"X-Customer-Key","Custom-Value"},Order = 1)]
         public async Task<IActionResult> Index(
             string searchBy,
             string? searchString,
@@ -36,29 +40,18 @@ namespace CRUD.Controllers
                 sortOrder: {sortOrder}");
             
             //Search
-            ViewBag.SearchFields = new Dictionary<string, string>()
-            {
-                { nameof(PersonResponse.PersonName), "Person Name" },
-                { nameof(PersonResponse.Email), "Email" },
-                { nameof(PersonResponse.DateOfBirth), "Date of Birth" },
-                { nameof(PersonResponse.Gender), "Gender" },
-                { nameof(PersonResponse.Country), "Country" },
-                { nameof(PersonResponse.Address), "Address" } 
-            };
+            
             List<PersonResponse> persons = await _personService.GetFilteredPersons(searchBy, searchString);
-            ViewBag.CurrentSearchBy = searchBy;
-            ViewBag.CurrentSearchString = searchString;
 
             //Sort
             List<PersonResponse> sortedPersons = await _personService.GetSortedPersons(persons, sortBy, sortOrder);
-            ViewBag.CurrentSortBy = sortBy;
-            ViewBag.CurrentSortOrder = sortOrder.ToString();
 
             return View(sortedPersons);
         }
 
         [Route("create")]
         [HttpGet]
+        [TypeFilter(typeof(ResponseHeaderActionFilter), Arguments = new object[] {"my-key","my-value"})]
         public async Task<IActionResult> Create()
         {
             List<CountryResponse> countries = await _countriesService.GetAllCountries();
