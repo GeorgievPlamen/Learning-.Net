@@ -30,7 +30,7 @@ builder.Services.AddControllersWithViews(options =>
 {
     //options.Filters.Add<ResponseHeaderActionFilter>();
     var logger = builder.Services.BuildServiceProvider().GetRequiredService<ILogger<ResponseHeaderActionFilter>>();
-    options.Filters.Add(new ResponseHeaderActionFilter(logger, "my-key-from-global", "my-value-from-global"));
+    options.Filters.Add(new ResponseHeaderActionFilter(logger, "my-key-from-global", "my-value-from-global", 2));
 });
 builder.Services.AddScoped<ICountriesService, CountriesService>();
 builder.Services.AddScoped<IPersonService, PersonService>();

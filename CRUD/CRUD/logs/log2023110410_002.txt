@@ -1,0 +1,35 @@
+2023-11-04 10:11:36.638 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-04 10:11:36.642 +02:00 [INF] Hosting environment: Development
+2023-11-04 10:11:36.644 +02:00 [INF] Content root path: D:\Coding\CSharp\NetCore\CRUD\CRUD\
+2023-11-04 10:12:57.349 +02:00 [INF] User profile is available. Using 'C:\Users\GRIGS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-04 10:12:57.521 +02:00 [INF] Now listening on: http://localhost:5174
+2023-11-04 10:12:58.186 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/ - -
+2023-11-04 10:12:58.211 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /
+2023-11-04 10:12:58.231 +02:00 [INF] Executing endpoint 'CRUD.Controllers.PersonsController.Index (CRUD)'
+2023-11-04 10:12:58.268 +02:00 [INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContracts.Enums.SortOrderOptions) on controller CRUD.Controllers.PersonsController (CRUD).
+2023-11-04 10:12:58.400 +02:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-11-04 10:12:58.401 +02:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-11-04 10:12:58.401 +02:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-11-04 10:12:58.403 +02:00 [INF] PersonsListOnActionExecuting method
+2023-11-04 10:12:58.404 +02:00 [INF] Index action method of PersonsController
+2023-11-04 10:12:58.406 +02:00 [INF] GetFilteredPersons of PersonService
+2023-11-04 10:12:58.407 +02:00 [INF] GetAllPersons of PersonService
+2023-11-04 10:12:59.043 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2023-11-04 10:12:59.453 +02:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[PersonName], [p].[ReceiveNewsLetters], [p].[TaxIdentificationNumber], [c].[CountryId], [c].[CountryName]
+FROM [Persons] AS [p]
+INNER JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[CountryId]
+2023-11-04 10:12:59.545 +02:00 [INF] GetSortedPersons of PersonService
+2023-11-04 10:12:59.552 +02:00 [INF] PersonsListActionFilter.OnActionExecuted method
+2023-11-04 10:12:59.581 +02:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-11-04 10:12:59.582 +02:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-11-04 10:12:59.583 +02:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-11-04 10:12:59.585 +02:00 [INF] PersonsListResultFilter.OnResultExecuting - before
+2023-11-04 10:12:59.591 +02:00 [INF] Executing ViewResult, running view Index.
+2023-11-04 10:12:59.755 +02:00 [INF] Executed ViewResult - view Index executed in 163.6569ms.
+2023-11-04 10:12:59.758 +02:00 [INF] PersonsListResultFilter.OnResultExecuted - after

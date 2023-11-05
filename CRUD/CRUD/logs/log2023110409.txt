@@ -1,0 +1,41 @@
+2023-11-04 09:56:44.179 +02:00 [INF] User profile is available. Using 'C:\Users\GRIGS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-04 09:56:44.380 +02:00 [INF] Now listening on: http://localhost:5174
+2023-11-04 09:56:45.004 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/ - -
+2023-11-04 09:56:45.028 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /
+2023-11-04 09:56:45.049 +02:00 [INF] Executing endpoint 'CRUD.Controllers.PersonsController.Index (CRUD)'
+2023-11-04 09:56:45.066 +02:00 [INF] Executed endpoint 'CRUD.Controllers.PersonsController.Index (CRUD)'
+2023-11-04 09:56:45.069 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'System.Int32' while attempting to activate 'CRUD.Filters.ActionFilters.ResponseHeaderActionFilter'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method2(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.TypeFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-11-04 09:56:45.320 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/ - - - 500 - text/html;+charset=utf-8 317.8064ms
+2023-11-04 09:56:45.320 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/_framework/aspnetcore-browser-refresh.js - -
+2023-11-04 09:56:45.324 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/_framework/aspnetcore-browser-refresh.js - - - 200 12340 application/javascript;+charset=utf-8 4.1233ms
+2023-11-04 09:56:45.345 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/_vs/browserLink - -
+2023-11-04 09:56:45.377 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.5811ms
+2023-11-04 09:56:45.393 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/favicon.ico - -
+2023-11-04 09:56:45.393 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /favicon.ico
+2023-11-04 09:56:45.396 +02:00 [INF] Response:
+StatusCode: 404
+2023-11-04 09:56:45.396 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/favicon.ico - - - 404 0 - 3.6764ms

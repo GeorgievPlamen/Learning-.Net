@@ -1,0 +1,85 @@
+2023-11-05 09:17:31.629 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-05 09:17:31.634 +02:00 [INF] Hosting environment: Development
+2023-11-05 09:17:31.635 +02:00 [INF] Content root path: D:\Coding\CSharp\NetCore\CRUD\CRUD\
+2023-11-05 09:18:53.377 +02:00 [INF] User profile is available. Using 'C:\Users\GRIGS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-05 09:18:53.474 +02:00 [INF] Now listening on: http://localhost:5174
+2023-11-05 09:18:54.046 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/ - -
+2023-11-05 09:18:54.070 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /
+2023-11-05 09:18:54.090 +02:00 [INF] Executing endpoint 'CRUD.Controllers.PersonsController.Index (CRUD)'
+2023-11-05 09:18:54.125 +02:00 [INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContracts.Enums.SortOrderOptions) on controller CRUD.Controllers.PersonsController (CRUD).
+2023-11-05 09:18:54.255 +02:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-11-05 09:18:54.255 +02:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-11-05 09:18:54.256 +02:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-11-05 09:18:54.257 +02:00 [INF] PersonsListOnActionExecuting method
+2023-11-05 09:18:54.258 +02:00 [INF] Index action method of PersonsController
+2023-11-05 09:18:54.260 +02:00 [INF] GetFilteredPersons of PersonService
+2023-11-05 09:18:54.261 +02:00 [INF] GetAllPersons of PersonService
+2023-11-05 09:18:54.890 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2023-11-05 09:18:55.299 +02:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PersonId], [p].[Address], [p].[CountryId], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[PersonName], [p].[ReceiveNewsLetters], [p].[TaxIdentificationNumber], [c].[CountryId], [c].[CountryName]
+FROM [Persons] AS [p]
+INNER JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[CountryId]
+2023-11-05 09:18:55.388 +02:00 [INF] GetSortedPersons of PersonService
+2023-11-05 09:18:55.396 +02:00 [INF] PersonsListActionFilter.OnActionExecuted method
+2023-11-05 09:18:55.422 +02:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-11-05 09:18:55.423 +02:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-11-05 09:18:55.424 +02:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-11-05 09:18:55.430 +02:00 [INF] Executing ViewResult, running view Index.
+2023-11-05 09:18:55.588 +02:00 [INF] Executed ViewResult - view Index executed in 156.4552ms.
+2023-11-05 09:18:55.592 +02:00 [INF] Executed action CRUD.Controllers.PersonsController.Index (CRUD) in 1465.8576ms
+2023-11-05 09:18:55.593 +02:00 [INF] Executed endpoint 'CRUD.Controllers.PersonsController.Index (CRUD)'
+2023-11-05 09:18:55.595 +02:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+Date: Sun, 05 Nov 2023 07:18:55 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+my-class-key: [Redacted]
+X-Customer-Key: [Redacted]
+my-key-from-global: [Redacted]
+2023-11-05 09:18:55.618 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/ - - - 200 - text/html;+charset=utf-8 1575.2455ms
+2023-11-05 09:18:55.631 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/_vs/browserLink - -
+2023-11-05 09:18:55.632 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 09:18:55.636 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/_framework/aspnetcore-browser-refresh.js - - - 200 12340 application/javascript;+charset=utf-8 3.9076ms
+2023-11-05 09:18:55.643 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.4911ms
+2023-11-05 09:18:56.843 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/Persons/create - -
+2023-11-05 09:18:56.844 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /Persons/create
+2023-11-05 09:18:56.846 +02:00 [INF] Executing endpoint 'CRUD.Controllers.PersonsController.Create (CRUD)'
+2023-11-05 09:18:56.849 +02:00 [INF] Route matched with {action = "Create", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create() on controller CRUD.Controllers.PersonsController (CRUD).
+2023-11-05 09:18:56.851 +02:00 [INF] FeatureDisabledResourceFilter.OnResourceExecutionAsync - before
+2023-11-05 09:18:56.851 +02:00 [INF] FeatureDisabledResourceFilter.OnResourceExecutionAsync - after
+2023-11-05 09:18:56.855 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 404
+2023-11-05 09:18:56.855 +02:00 [INF] Executed action CRUD.Controllers.PersonsController.Create (CRUD) in 4.8274ms
+2023-11-05 09:18:56.856 +02:00 [INF] Executed endpoint 'CRUD.Controllers.PersonsController.Create (CRUD)'
+2023-11-05 09:18:56.856 +02:00 [INF] Response:
+StatusCode: 404
+2023-11-05 09:18:56.857 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/Persons/create - - - 404 0 - 13.5563ms
+2023-11-05 09:19:00.306 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/_framework/aspnetcore-browser-refresh.js - -
+2023-11-05 09:19:00.306 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/_framework/aspnetcore-browser-refresh.js - - - 200 12340 application/javascript;+charset=utf-8 0.6918ms
+2023-11-05 09:19:01.207 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/Persons/create - -
+2023-11-05 09:19:01.208 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /Persons/create
+2023-11-05 09:19:01.210 +02:00 [INF] Executing endpoint 'CRUD.Controllers.PersonsController.Create (CRUD)'
+2023-11-05 09:19:01.210 +02:00 [INF] Route matched with {action = "Create", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create() on controller CRUD.Controllers.PersonsController (CRUD).
+2023-11-05 09:19:01.211 +02:00 [INF] FeatureDisabledResourceFilter.OnResourceExecutionAsync - before
+2023-11-05 09:19:01.212 +02:00 [INF] FeatureDisabledResourceFilter.OnResourceExecutionAsync - after
+2023-11-05 09:19:01.212 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 404
+2023-11-05 09:19:01.213 +02:00 [INF] Executed action CRUD.Controllers.PersonsController.Create (CRUD) in 1.3666ms
+2023-11-05 09:19:01.213 +02:00 [INF] Executed endpoint 'CRUD.Controllers.PersonsController.Create (CRUD)'
+2023-11-05 09:19:01.214 +02:00 [INF] Response:
+StatusCode: 404
+2023-11-05 09:19:01.214 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/Persons/create - - - 404 0 - 7.0095ms

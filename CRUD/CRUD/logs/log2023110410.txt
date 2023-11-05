@@ -1,0 +1,31 @@
+2023-11-04 10:10:43.387 +02:00 [INF] User profile is available. Using 'C:\Users\GRIGS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-04 10:10:43.481 +02:00 [INF] Now listening on: http://localhost:5174
+2023-11-04 10:10:43.942 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/ - -
+2023-11-04 10:10:43.969 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /
+2023-11-04 10:10:43.988 +02:00 [INF] Executing endpoint 'CRUD.Controllers.PersonsController.Index (CRUD)'
+2023-11-04 10:10:44.004 +02:00 [INF] Executed endpoint 'CRUD.Controllers.PersonsController.Index (CRUD)'
+2023-11-04 10:10:44.008 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'CRUD.Filters.ResultFilters.PersonsListResultFilter'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method3(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.TypeFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-11-04 10:10:44.132 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/ - - - 500 - text/html;+charset=utf-8 190.1933ms
+2023-11-04 10:10:44.133 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/_framework/aspnetcore-browser-refresh.js - -
+2023-11-04 10:10:44.139 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5174/_vs/browserLink - -
+2023-11-04 10:10:44.139 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/_framework/aspnetcore-browser-refresh.js - - - 200 12340 application/javascript;+charset=utf-8 6.2593ms
+2023-11-04 10:10:44.151 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5174/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 12.6544ms
