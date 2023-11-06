@@ -2,15 +2,35 @@
 
 namespace CRUD.Filters.ActionFilters
 {
+    public class ResponseHeaderFilterFactoryClassAttribute : Attribute, IFilterFactory
+    {
+        public bool IsReusable => false;
+        public string? Key { get; set; }
+        public string? Value { get; set; }
+        public int Order { get; set; }
+
+        public ResponseHeaderFilterFactoryClassAttribute(string key, string value, int order)
+        {
+            Key = key;
+            Value = value;
+            Order = order;
+        }
+
+        public IFilterMetadata CreateInstance(IServiceProvider serviceProvider)
+        {
+           var filter = new ResponseHeaderActionFilter(Key, Value, Order);
+
+           return filter;
+        }
+    }
+
     public class ResponseHeaderActionFilter : IAsyncActionFilter, IOrderedFilter
     {
-        private readonly ILogger<ResponseHeaderActionFilter> _logger;
         private readonly string _key;
         private readonly string _value;
 
-        public ResponseHeaderActionFilter(ILogger<ResponseHeaderActionFilter> logger, string key, string value, int order)
+        public ResponseHeaderActionFilter(string key, string value, int order)
         {
-            _logger = logger;
             _key = key;
             _value = value;
             Order = order;
@@ -20,10 +40,8 @@ namespace CRUD.Filters.ActionFilters
 
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
-            _logger.LogInformation("{FilterName}.{MethodName} method", nameof(ResponseHeaderActionFilter), nameof(OnActionExecutionAsync));
             context.HttpContext.Response.Headers[_key] = _value;
             await next();
-            _logger.LogInformation("{FilterName}.{MethodName} method", nameof(ResponseHeaderActionFilter), nameof(OnActionExecutionAsync));
         }
     }
 }

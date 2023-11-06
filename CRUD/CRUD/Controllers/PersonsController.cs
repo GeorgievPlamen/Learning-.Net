@@ -14,7 +14,8 @@ using ServiceContracts.Enums;
 namespace CRUD.Controllers
 {
     [Route("[controller]")]
-    [TypeFilter(typeof(ResponseHeaderActionFilter), Arguments = new object[] { "my-class-key", "my-class-value", 3 })]
+    //[TypeFilter(typeof(ResponseHeaderActionFilter), Arguments = new object[] { "my-class-key", "my-class-value", 3 })]
+    [ResponseHeaderFilterFactoryClass("my-class-key", "my-class-value", 3)]
     [TypeFilter(typeof(HandleExceptionFilter))]
     [TypeFilter(typeof(PersonsAlwaysRunResultFilter))]
     public class PersonsController : Controller
@@ -58,7 +59,8 @@ namespace CRUD.Controllers
 
         [Route("create")]
         [HttpGet]
-        [TypeFilter(typeof(ResponseHeaderActionFilter), Arguments = new object[] {"my-key","my-value", 4})]
+        //[TypeFilter(typeof(ResponseHeaderActionFilter), Arguments = new object[] {"my-key","my-value", 4})]
+        [ResponseHeaderFilterFactoryClass("my-class-key", "my-class-value", 3)]
         [TypeFilter(typeof(FeatureDisabledResourceFilter), Arguments = new object[] { false })]
         [SkipFilter]
         public async Task<IActionResult> Create()
