@@ -1,5 +1,8 @@
-﻿using CRUDExample.Filters.ActionFilters;
+﻿using ContactsManager.Core.Domain.IdentityEntities;
+using CRUDExample.Filters.ActionFilters;
 using Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Repositories;
 using RepositoryContracts;
@@ -50,6 +53,19 @@ namespace CRUDExample
    });
 
    services.AddTransient<PersonsListActionFilter>();
+   services.AddIdentity<ApplicationUser, ApplicationRole>((options) =>
+   {
+       options.Password.RequiredLength = 5;
+       options.Password.RequireNonAlphanumeric = false;
+       options.Password.RequireUppercase = false;
+       options.Password.RequireLowercase = true;
+       options.Password.RequireDigit = false;
+       options.Password.RequiredUniqueChars = 3;
+   })
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders()
+                .AddUserStore<UserStore<ApplicationUser, ApplicationRole, ApplicationDbContext, Guid>>()
+                .AddRoleStore<RoleStore<ApplicationRole, ApplicationDbContext, Guid>>();
 
    services.AddHttpLogging(options =>
    {

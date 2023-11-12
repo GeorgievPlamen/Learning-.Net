@@ -483,3 +483,8 @@ D:\Coding\CSharp\NetCore\ContactsManagerSolution\ContactsManager.IntegrationTest
 D:\Coding\CSharp\NetCore\ContactsManagerSolution\ContactsManager.IntegrationTests\obj\Debug\net6.0\ContactsManager.IntegrationTests.pdb
 D:\Coding\CSharp\NetCore\ContactsManagerSolution\ContactsManager.IntegrationTests\obj\Debug\net6.0\ContactsManager.IntegrationTests.genruntimeconfig.cache
 D:\Coding\CSharp\NetCore\ContactsManagerSolution\ContactsManager.IntegrationTests\obj\Debug\net6.0\ref\ContactsManager.IntegrationTests.dll
+D:\Coding\CSharp\NetCore\ContactsManagerSolution\ContactsManager.IntegrationTests\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Coding\CSharp\NetCore\ContactsManagerSolution\ContactsManager.IntegrationTests\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Coding\CSharp\NetCore\ContactsManagerSolution\ContactsManager.IntegrationTests\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Coding\CSharp\NetCore\ContactsManagerSolution\ContactsManager.IntegrationTests\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+D:\Coding\CSharp\NetCore\ContactsManagerSolution\ContactsManager.IntegrationTests\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll

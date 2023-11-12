@@ -1,0 +1,296 @@
+2023-11-12 10:18:38.660 +02:00 [INF] Entity Framework Core 6.0.9 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2023-11-12 10:18:38.781 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-12 10:18:38.796 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-12 10:18:38.798 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-12 10:18:38.799 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-12 10:18:38.809 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-12 10:18:38.834 +02:00 [INF] No migrations were applied. The database is already up to date.
+2023-11-12 10:19:17.831 +02:00 [INF] Entity Framework Core 6.0.9 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2023-11-12 10:19:24.887 +02:00 [INF] Entity Framework Core 6.0.9 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2023-11-12 10:19:24.977 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-12 10:19:24.992 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-12 10:19:24.994 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-12 10:19:24.994 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-12 10:19:25.004 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-12 10:19:25.015 +02:00 [INF] Applying migration '20231112081918_IdentityTables'.
+2023-11-12 10:19:25.114 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+2023-11-12 10:19:25.115 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUsers] (
+    [Id] uniqueidentifier NOT NULL,
+    [PersonName] nvarchar(max) NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_AspNetUsers] PRIMARY KEY ([Id])
+);
+2023-11-12 10:19:25.116 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] uniqueidentifier NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE
+);
+2023-11-12 10:19:25.117 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] uniqueidentifier NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2023-11-12 10:19:25.119 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2023-11-12 10:19:25.120 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserRoles] (
+    [UserId] uniqueidentifier NOT NULL,
+    [RoleId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2023-11-12 10:19:25.121 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserTokens] (
+    [UserId] uniqueidentifier NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2023-11-12 10:19:25.121 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]);
+2023-11-12 10:19:25.122 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL;
+2023-11-12 10:19:25.122 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]);
+2023-11-12 10:19:25.374 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]);
+2023-11-12 10:19:25.374 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]);
+2023-11-12 10:19:25.375 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]);
+2023-11-12 10:19:25.375 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL;
+2023-11-12 10:19:25.376 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20231112081918_IdentityTables', N'6.0.9');
+2023-11-12 10:22:37.551 +02:00 [INF] User profile is available. Using 'C:\Users\GRIGS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-12 10:22:37.662 +02:00 [INF] Now listening on: http://localhost:5190
+2023-11-12 10:22:37.998 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5190/ - -
+2023-11-12 10:22:38.029 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /
+2023-11-12 10:22:38.051 +02:00 [INF] Executing endpoint 'CRUDExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-11-12 10:22:38.093 +02:00 [INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContracts.Enums.SortOrderOptions) on controller CRUDExample.Controllers.PersonsController (ContactsManager.UI).
+2023-11-12 10:22:38.246 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-12 10:22:38.246 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-12 10:22:38.246 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-12 10:22:38.247 +02:00 [INF] PersonsListActionFilter.OnActionExecuting method
+2023-11-12 10:22:38.249 +02:00 [INF] Index action method of PersonsController
+2023-11-12 10:22:38.251 +02:00 [INF] GetFilteredPersons of PersonsService
+2023-11-12 10:22:38.253 +02:00 [INF] GetAllPersons of PersonsRepository
+2023-11-12 10:22:38.966 +02:00 [INF] Entity Framework Core 6.0.9 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2023-11-12 10:22:39.409 +02:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PersonID], [p].[Address], [p].[CountryID], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[PersonName], [p].[ReceiveNewsLetters], [p].[TaxIdentificationNumber], [c].[CountryID], [c].[CountryName]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryID] = [c].[CountryID]
+2023-11-12 10:22:39.503 +02:00 [INF] Time for Filtered Persons from Database completed in 1250.7 ms
+2023-11-12 10:22:39.515 +02:00 [INF] GetSortedPersons of PersonsService
+2023-11-12 10:22:39.522 +02:00 [INF] PersonsListActionFilter.OnActionExecuted method
+2023-11-12 10:22:39.550 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-12 10:22:39.551 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-12 10:22:39.551 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-12 10:22:39.554 +02:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - before
+2023-11-12 10:22:39.559 +02:00 [INF] Executing ViewResult, running view Index.
+2023-11-12 10:22:39.721 +02:00 [INF] Executed ViewResult - view Index executed in 161.1004ms.
+2023-11-12 10:22:39.724 +02:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - after
+2023-11-12 10:22:39.727 +02:00 [INF] Executed action CRUDExample.Controllers.PersonsController.Index (ContactsManager.UI) in 1633.1654ms
+2023-11-12 10:22:39.728 +02:00 [INF] Executed endpoint 'CRUDExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-11-12 10:22:39.730 +02:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+Date: Sun, 12 Nov 2023 08:22:39 GMT
+Server: Kestrel
+Last-Modified: 2023-11-12 10:22
+Transfer-Encoding: chunked
+My-Key-From-Global: [Redacted]
+MyKey-FromAction: [Redacted]
+My-Key-From-Controller: [Redacted]
+2023-11-12 10:22:39.733 +02:00 [INF] HTTP GET / responded 200 in 1704.8509 ms
+2023-11-12 10:22:39.759 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5190/ - - - 200 - text/html;+charset=utf-8 1763.2494ms
+2023-11-12 10:22:39.770 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5190/_vs/browserLink - -
+2023-11-12 10:22:39.771 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5190/_framework/aspnetcore-browser-refresh.js - -
+2023-11-12 10:22:39.777 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5190/_framework/aspnetcore-browser-refresh.js - - - 200 12368 application/javascript;+charset=utf-8 5.2033ms
+2023-11-12 10:22:39.782 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5190/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 12.0155ms
+2023-11-12 10:22:41.219 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5190/Account/Register - -
+2023-11-12 10:22:41.220 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /Account/Register
+2023-11-12 10:22:41.222 +02:00 [INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Register (ContactsManager.UI)'
+2023-11-12 10:22:41.223 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+2023-11-12 10:22:41.239 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-12 10:22:41.239 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-12 10:22:41.240 +02:00 [INF] Executing ViewResult, running view Register.
+2023-11-12 10:22:41.277 +02:00 [INF] Executed ViewResult - view Register executed in 37.2739ms.
+2023-11-12 10:22:41.277 +02:00 [INF] Executed action ContactsManager.UI.Controllers.AccountController.Register (ContactsManager.UI) in 52.8252ms
+2023-11-12 10:22:41.278 +02:00 [INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Register (ContactsManager.UI)'
+2023-11-12 10:22:41.279 +02:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+Date: Sun, 12 Nov 2023 08:22:40 GMT
+Server: Kestrel
+Cache-Control: [Redacted]
+Pragma: [Redacted]
+Transfer-Encoding: chunked
+My-Key-From-Global: [Redacted]
+2023-11-12 10:22:41.279 +02:00 [INF] HTTP GET /Account/Register responded 200 in 59.3170 ms
+2023-11-12 10:22:41.283 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5190/Account/Register - - - 200 - text/html;+charset=utf-8 64.3596ms
+2023-11-12 10:22:41.289 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5190/_vs/browserLink - -
+2023-11-12 10:22:41.290 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5190/_framework/aspnetcore-browser-refresh.js - -
+2023-11-12 10:22:41.290 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5190/_framework/aspnetcore-browser-refresh.js - - - 200 12368 application/javascript;+charset=utf-8 0.9031ms
+2023-11-12 10:22:41.299 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5190/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 9.9201ms
+2023-11-12 10:22:41.314 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5190/jquery.validate.unobtrusive.min.js - -
+2023-11-12 10:22:41.314 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /jquery.validate.unobtrusive.min.js
+2023-11-12 10:22:41.342 +02:00 [INF] Sending file. Request path: '/jquery.validate.unobtrusive.min.js'. Physical path: 'D:\Coding\CSharp\NetCore\ContactsManagerSolution\ContactsManager.UI\wwwroot\jquery.validate.unobtrusive.min.js'
+2023-11-12 10:22:41.343 +02:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/javascript
+Date: Sun, 12 Nov 2023 08:22:40 GMT
+Server: Kestrel
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Tue, 29 Aug 2023 07:45:45 GMT
+Content-Length: 5867
+2023-11-12 10:22:41.344 +02:00 [INF] HTTP GET /jquery.validate.unobtrusive.min.js responded 200 in 29.5690 ms
+2023-11-12 10:22:41.345 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5190/jquery.validate.unobtrusive.min.js - - - 200 5867 application/javascript 30.8962ms
+2023-11-12 10:22:58.185 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5190/Account/Register application/x-www-form-urlencoded 280
+2023-11-12 10:22:58.186 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: http
+PathBase: 
+Path: /Account/Register
+2023-11-12 10:22:58.187 +02:00 [INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Register (ContactsManager.UI)'
+2023-11-12 10:22:58.191 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(ContactsManager.Core.DTO.RegisterDTO) on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+2023-11-12 10:22:58.212 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-12 10:22:58.235 +02:00 [INF] Entity Framework Core 6.0.9 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2023-11-12 10:22:58.311 +02:00 [INF] Executed DbCommand (35ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-11-12 10:22:58.477 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PersonName], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2023-11-12 10:22:58.506 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-12 10:22:58.507 +02:00 [INF] Executing RedirectResult, redirecting to /Persons/Index.
+2023-11-12 10:22:58.508 +02:00 [INF] Executed action ContactsManager.UI.Controllers.AccountController.Register (ContactsManager.UI) in 316.1657ms
+2023-11-12 10:22:58.509 +02:00 [INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Register (ContactsManager.UI)'
+2023-11-12 10:22:58.509 +02:00 [INF] Response:
+StatusCode: 302
+Location: /Persons/Index
+My-Key-From-Global: [Redacted]
+2023-11-12 10:22:58.510 +02:00 [INF] HTTP POST /Account/Register responded 302 in 323.5481 ms
+2023-11-12 10:22:58.510 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5190/Account/Register application/x-www-form-urlencoded 280 - 302 0 - 325.4049ms
+2023-11-12 10:22:58.512 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5190/Persons/Index - -
+2023-11-12 10:22:58.513 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /Persons/Index
+2023-11-12 10:22:58.513 +02:00 [INF] Executing endpoint 'CRUDExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-11-12 10:22:58.516 +02:00 [INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContracts.Enums.SortOrderOptions) on controller CRUDExample.Controllers.PersonsController (ContactsManager.UI).
+2023-11-12 10:22:58.517 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-12 10:22:58.521 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-12 10:22:58.522 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-12 10:22:58.522 +02:00 [INF] PersonsListActionFilter.OnActionExecuting method
+2023-11-12 10:22:58.522 +02:00 [INF] Index action method of PersonsController
+2023-11-12 10:22:58.523 +02:00 [INF] GetFilteredPersons of PersonsService
+2023-11-12 10:22:58.523 +02:00 [INF] GetAllPersons of PersonsRepository
+2023-11-12 10:22:58.555 +02:00 [INF] Entity Framework Core 6.0.9 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2023-11-12 10:22:58.558 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PersonID], [p].[Address], [p].[CountryID], [p].[DateOfBirth], [p].[Email], [p].[Gender], [p].[PersonName], [p].[ReceiveNewsLetters], [p].[TaxIdentificationNumber], [c].[CountryID], [c].[CountryName]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryID] = [c].[CountryID]
+2023-11-12 10:22:58.560 +02:00 [INF] Time for Filtered Persons from Database completed in 36.7 ms
+2023-11-12 10:22:58.560 +02:00 [INF] GetSortedPersons of PersonsService
+2023-11-12 10:22:58.561 +02:00 [INF] PersonsListActionFilter.OnActionExecuted method
+2023-11-12 10:22:58.561 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-12 10:22:58.562 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-12 10:22:58.562 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-12 10:22:58.562 +02:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - before
+2023-11-12 10:22:58.563 +02:00 [INF] Executing ViewResult, running view Index.
+2023-11-12 10:22:58.566 +02:00 [INF] Executed ViewResult - view Index executed in 3.1346ms.
+2023-11-12 10:22:58.567 +02:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - after
+2023-11-12 10:22:58.567 +02:00 [INF] Executed action CRUDExample.Controllers.PersonsController.Index (ContactsManager.UI) in 50.728ms
+2023-11-12 10:22:58.568 +02:00 [INF] Executed endpoint 'CRUDExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-11-12 10:22:58.568 +02:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+Date: Sun, 12 Nov 2023 08:22:57 GMT
+Server: Kestrel
+Last-Modified: 2023-11-12 10:22
+Transfer-Encoding: chunked
+My-Key-From-Global: [Redacted]
+MyKey-FromAction: [Redacted]
+My-Key-From-Controller: [Redacted]
+2023-11-12 10:22:58.569 +02:00 [INF] HTTP GET /Persons/Index responded 200 in 56.0820 ms
+2023-11-12 10:22:58.573 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5190/Persons/Index - - - 200 - text/html;+charset=utf-8 60.9244ms
+2023-11-12 10:22:58.577 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5190/_vs/browserLink - -
+2023-11-12 10:22:58.577 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5190/_framework/aspnetcore-browser-refresh.js - -
+2023-11-12 10:22:58.580 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5190/_framework/aspnetcore-browser-refresh.js - - - 200 12368 application/javascript;+charset=utf-8 1.4503ms
+2023-11-12 10:22:58.582 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5190/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 4.5579ms
