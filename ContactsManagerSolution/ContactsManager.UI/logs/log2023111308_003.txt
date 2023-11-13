@@ -1,0 +1,80 @@
+2023-11-13 08:47:18.633 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-13 08:47:18.637 +02:00 [INF] Hosting environment: Development
+2023-11-13 08:47:18.641 +02:00 [INF] Content root path: D:\Coding\CSharp\NetCore\ContactsManagerSolution\ContactsManager.UI\
+2023-11-13 08:58:47.616 +02:00 [INF] User profile is available. Using 'C:\Users\GRIGS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-13 08:58:47.718 +02:00 [INF] Now listening on: http://localhost:5190
+2023-11-13 08:58:47.959 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5190/ - -
+2023-11-13 08:58:47.986 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /
+2023-11-13 08:58:48.017 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-11-13 08:58:48.024 +02:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2023-11-13 08:58:48.025 +02:00 [INF] Response:
+StatusCode: 302
+Location: http://localhost:5190/Account/Login?ReturnUrl=%2F
+2023-11-13 08:58:48.027 +02:00 [INF] HTTP GET / responded 302 in 42.3488 ms
+2023-11-13 08:58:48.036 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5190/ - - - 302 0 - 79.2520ms
+2023-11-13 08:58:48.042 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5190/Account/Login?ReturnUrl=%2F - -
+2023-11-13 08:58:48.042 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /Account/Login
+2023-11-13 08:58:48.050 +02:00 [INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+2023-11-13 08:58:48.067 +02:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+2023-11-13 08:58:48.185 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-13 08:58:48.185 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-13 08:58:48.191 +02:00 [INF] Executing ViewResult, running view Login.
+2023-11-13 08:58:48.384 +02:00 [INF] Executed ViewResult - view Login executed in 192.9777ms.
+2023-11-13 08:58:48.389 +02:00 [INF] Executed action ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI) in 320.7993ms
+2023-11-13 08:58:48.390 +02:00 [INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+2023-11-13 08:58:48.392 +02:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+Date: Mon, 13 Nov 2023 06:58:47 GMT
+Server: Kestrel
+Cache-Control: [Redacted]
+Pragma: [Redacted]
+Transfer-Encoding: chunked
+My-Key-From-Global: [Redacted]
+2023-11-13 08:58:48.393 +02:00 [INF] HTTP GET /Account/Login responded 200 in 350.6773 ms
+2023-11-13 08:58:48.410 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5190/Account/Login?ReturnUrl=%2F - - - 200 - text/html;+charset=utf-8 368.6241ms
+2023-11-13 08:58:48.432 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5190/_framework/aspnetcore-browser-refresh.js - -
+2023-11-13 08:58:48.432 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5190/_vs/browserLink - -
+2023-11-13 08:58:48.436 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5190/_framework/aspnetcore-browser-refresh.js - - - 200 12368 application/javascript;+charset=utf-8 3.9607ms
+2023-11-13 08:58:48.446 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5190/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 13.8851ms
+2023-11-13 08:58:49.510 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5190/Account/Register - -
+2023-11-13 08:58:49.511 +02:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /Account/Register
+2023-11-13 08:58:49.514 +02:00 [INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Register (ContactsManager.UI)'
+2023-11-13 08:58:49.515 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+2023-11-13 08:58:49.525 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-13 08:58:49.530 +02:00 [INF] Before logic - ResponseHeaderActionFilter
+2023-11-13 08:58:49.532 +02:00 [INF] Executing ViewResult, running view Register.
+2023-11-13 08:58:49.564 +02:00 [INF] Executed ViewResult - view Register executed in 33.091ms.
+2023-11-13 08:58:49.565 +02:00 [INF] Executed action ContactsManager.UI.Controllers.AccountController.Register (ContactsManager.UI) in 49.2973ms
+2023-11-13 08:58:49.566 +02:00 [INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Register (ContactsManager.UI)'
+2023-11-13 08:58:49.566 +02:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+Date: Mon, 13 Nov 2023 06:58:48 GMT
+Server: Kestrel
+Cache-Control: [Redacted]
+Pragma: [Redacted]
+Transfer-Encoding: chunked
+My-Key-From-Global: [Redacted]
+2023-11-13 08:58:49.567 +02:00 [INF] HTTP GET /Account/Register responded 200 in 55.3446 ms
+2023-11-13 08:58:49.569 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5190/Account/Register - - - 200 - text/html;+charset=utf-8 58.2894ms
+2023-11-13 08:58:49.580 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5190/_vs/browserLink - -
+2023-11-13 08:58:49.580 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5190/_framework/aspnetcore-browser-refresh.js - -
+2023-11-13 08:58:49.581 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5190/_framework/aspnetcore-browser-refresh.js - - - 200 12368 application/javascript;+charset=utf-8 1.3116ms
+2023-11-13 08:58:49.582 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5190/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 1.9284ms

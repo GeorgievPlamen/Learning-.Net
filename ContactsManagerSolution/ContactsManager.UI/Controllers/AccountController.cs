@@ -1,29 +1,37 @@
 ﻿using ContactsManager.Core.Domain.IdentityEntities;
 using ContactsManager.Core.DTO;
+using ContactsManager.Core.Enums;
 using CRUDExample.Controllers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ContactsManager.UI.Controllers
 {
-    [Route("[controller]/[action]")]
+    //[Route("[controller]/[action]")]
+    [AllowAnonymous]
     public class AccountController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly RoleManager<ApplicationRole> _roleManager;
 
-        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<ApplicationRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
         }
 
         [HttpGet]
+        [Authorize("NotAuthenticated")]
         public IActionResult Register()
         {
             return View();
         }
         [HttpPost]
+        [Authorize("NotAuthenticated")]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterDTO registerDTO)
         {
             //error check
@@ -46,6 +54,35 @@ namespace ContactsManager.UI.Controllers
             IdentityResult result = await _userManager.CreateAsync(user, registerDTO.Password);
             if (result.Succeeded)
             {
+                //Check status of radio button for Role
+                if(registerDTO.UserType == Core.Enums.UserTypeOptions.Admin)
+                {
+                    //Create "Admin" role
+                    if (await _roleManager.FindByNameAsync(UserTypeOptions.Admin.ToString()) is null)
+                    {
+                        ApplicationRole applicationRole = new ApplicationRole()
+                        {
+                            Name = UserTypeOptions.Admin.ToString()
+                        };
+                        await _roleManager.CreateAsync(applicationRole);
+                    }
+                    //Add the new user into "Admin" role
+                    await _userManager.AddToRoleAsync(user, UserTypeOptions.Admin.ToString());
+                }
+                else
+                {
+                    //Create "Admin" role
+                    if (await _roleManager.FindByNameAsync(UserTypeOptions.User.ToString()) is null)
+                    {
+                        ApplicationRole applicationRole = new ApplicationRole()
+                        {
+                            Name = UserTypeOptions.User.ToString()
+                        };
+                        await _roleManager.CreateAsync(applicationRole);
+                    }
+                    //Add the new user into "User" role
+                    await _userManager.AddToRoleAsync(user, UserTypeOptions.User.ToString());
+                }
                 //Sign in
                 await _signInManager.SignInAsync(user, isPersistent: false);
                 return RedirectToAction(nameof(PersonsController.Index), "Persons");
@@ -61,12 +98,13 @@ namespace ContactsManager.UI.Controllers
             return View(registerDTO);
         }
         [HttpGet]
+        [Authorize("NotAuthenticated")]
         public IActionResult Login()
         {
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Login(LoginDTO loginDTO)
+        public async Task<IActionResult> Login(LoginDTO loginDTO,string? ReturnUrl)
         {
             if(ModelState.IsValid == false)
             {
@@ -80,6 +118,19 @@ namespace ContactsManager.UI.Controllers
             
             if(result.Succeeded)
             {
+                ApplicationUser user = await _userManager.FindByEmailAsync(loginDTO.Email);
+                if(user != null)
+                {
+                    if(await _userManager.IsInRoleAsync(user, UserTypeOptions.Admin.ToString()))
+                    {
+                        return RedirectToAction("Index", "Home", new { area = "Admin" });
+                    }
+                }
+                if(!string.IsNullOrEmpty(ReturnUrl) &&
+                    Url.IsLocalUrl(ReturnUrl))
+                {
+                    return LocalRedirect(ReturnUrl);
+                }
                 return RedirectToAction(nameof(PersonsController.Index), "Persons");
             }
             
@@ -91,6 +142,20 @@ namespace ContactsManager.UI.Controllers
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction(nameof(PersonsController.Index), "Persons");
+        }
+
+        [AllowAnonymous]
+        public async Task<IActionResult> IsEmailAlreadyRegistered(string email)
+        {
+            ApplicationUser user = await _userManager.FindByEmailAsync(email);
+            if (user == null)
+            {
+                return Json(true);
+            }
+            else
+            {
+                return Json(false);
+            }    
         }
     }
 }

@@ -1,0 +1,5 @@
+2023-11-13 11:44:41.078 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-13 11:44:41.085 +02:00 [INF] Hosting environment: Development
+2023-11-13 11:44:41.086 +02:00 [INF] Content root path: D:\Coding\CSharp\NetCore\ContactsManagerSolution\ContactsManager.UI\
+2023-11-13 11:45:08.573 +02:00 [INF] User profile is available. Using 'C:\Users\GRIGS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-13 11:45:08.725 +02:00 [INF] Now listening on: https://localhost:5190
