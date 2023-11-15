@@ -19,6 +19,8 @@ namespace Orders.WebAPI.Enteties
         public double? UnitPrice { get; set; }
         [PositiveNumber]
         public double? TotalPrice { get; set; }
-        
+        [ForeignKey("OrderId")]
+        public Order? Order { get; set; }
+
     }
 }

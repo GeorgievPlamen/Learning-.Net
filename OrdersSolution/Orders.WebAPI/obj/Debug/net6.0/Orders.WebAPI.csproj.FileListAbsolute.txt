@@ -80,3 +80,5 @@ D:\Coding\CSharp\NetCore\OrdersSolution\Orders.WebAPI\obj\Debug\net6.0\refint\Or
 D:\Coding\CSharp\NetCore\OrdersSolution\Orders.WebAPI\obj\Debug\net6.0\Orders.WebAPI.pdb
 D:\Coding\CSharp\NetCore\OrdersSolution\Orders.WebAPI\obj\Debug\net6.0\Orders.WebAPI.genruntimeconfig.cache
 D:\Coding\CSharp\NetCore\OrdersSolution\Orders.WebAPI\obj\Debug\net6.0\ref\Orders.WebAPI.dll
+D:\Coding\CSharp\NetCore\OrdersSolution\Orders.WebAPI\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Coding\CSharp\NetCore\OrdersSolution\Orders.WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll

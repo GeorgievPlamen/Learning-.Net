@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Orders.WebAPI.AppDbContext;
 
@@ -10,6 +11,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
+
+//Swagger
 var app = builder.Build();
 
 
@@ -17,6 +20,7 @@ var app = builder.Build();
 
 app.UseHsts();
 app.UseHttpsRedirection();
+
 
 app.UseAuthorization();
 

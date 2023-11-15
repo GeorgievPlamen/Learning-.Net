@@ -21,8 +21,8 @@ namespace Orders.WebAPI.AppDbContext
             modelBuilder.Entity<OrderItem>().ToTable("OrderItems");
 
             modelBuilder.Entity<Order>().HasData(
-             new Order { OrderID = Guid.Parse("F4816224-70D6-4491-AC52-34F298ACE16F"), OrderNumber = "ORD001", CustomerName = "John Doe", OrderDate = DateTime.Now, TotalAmount = 66.5 },
-             new Order { OrderID = Guid.Parse("735886C0-FAF3-49CA-9776-8A20B756F1CB"), OrderNumber = "ORD002", CustomerName = "Jane Smith", OrderDate = DateTime.Now, TotalAmount = 225.8 }
+             new Order { OrderId = Guid.Parse("F4816224-70D6-4491-AC52-34F298ACE16F"), OrderNumber = "ORD001", CustomerName = "John Doe", OrderDate = DateTime.Now, TotalAmount = 66.5 },
+             new Order { OrderId = Guid.Parse("735886C0-FAF3-49CA-9776-8A20B756F1CB"), OrderNumber = "ORD002", CustomerName = "Jane Smith", OrderDate = DateTime.Now, TotalAmount = 225.8 }
              );
 
             modelBuilder.Entity<OrderItem>().HasData(

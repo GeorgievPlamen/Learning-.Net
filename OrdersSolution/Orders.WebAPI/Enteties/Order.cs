@@ -6,8 +6,7 @@ namespace Orders.WebAPI.Enteties
     public class Order
     {
         [Key]
-        public Guid OrderID { get; set; }
-        [RegularExpression(@"^(?i)ORD_\d{4}_\d+$\r\n", ErrorMessage = "The Order number should begin with 'ORD' followed by an underscore (_) and a sequential number.")]
+        public Guid OrderId { get; set; }
         public string? OrderNumber { get; set; }
         [Required(ErrorMessage = "Customer name is required"),MaxLength(50)]
         public string? CustomerName { get; set; }

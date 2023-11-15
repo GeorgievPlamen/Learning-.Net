@@ -7,9 +7,9 @@ namespace Orders.WebAPI.Enteties.CustomValidation
     {
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
-            if (value is int)
+            if (value is double)
             {
-                if ((int)value > 0)
+                if ((double)value > 0)
                 {
                     return ValidationResult.Success;
                 }
