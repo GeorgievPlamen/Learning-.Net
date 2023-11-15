@@ -8,10 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using CitiesManager.WebAPI.DatabaseContext;
 using CitiesManager.WebAPI.Models;
 
-namespace CitiesManager.WebAPI.Controllers
+namespace CitiesManager.WebAPI.Controllers.v1
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
+    [ApiVersion("1.0")]
     public class CitiesController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -22,13 +23,17 @@ namespace CitiesManager.WebAPI.Controllers
         }
 
         // GET: api/Cities
+        /// <summary>
+        /// Gets all cities from "cities" table, witch ID and Name.
+        /// </summary>
+        /// <returns>All cities</returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<City>>> GetCities()
         {
-          if (_context.Cities == null)
-          {
-              return NotFound();
-          }
+            if (_context.Cities == null)
+            {
+                return NotFound();
+            }
             return await _context.Cities.ToListAsync();
         }
 
@@ -36,10 +41,10 @@ namespace CitiesManager.WebAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<City>> GetCity(Guid id)
         {
-          if (_context.Cities == null)
-          {
-              return NotFound();
-          }
+            if (_context.Cities == null)
+            {
+                return NotFound();
+            }
             var city = await _context.Cities.FindAsync(id);
 
             if (city == null)
@@ -86,10 +91,10 @@ namespace CitiesManager.WebAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<City>> PostCity(City city)
         {
-          if (_context.Cities == null)
-          {
-              return Problem("Entity set 'ApplicationDbContext.Cities'  is null.");
-          }
+            if (_context.Cities == null)
+            {
+                return Problem("Entity set 'ApplicationDbContext.Cities'  is null.");
+            }
             _context.Cities.Add(city);
             await _context.SaveChangesAsync();
 
