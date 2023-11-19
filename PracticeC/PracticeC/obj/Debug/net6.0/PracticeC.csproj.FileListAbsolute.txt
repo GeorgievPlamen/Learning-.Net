@@ -1,0 +1,14 @@
+D:\Coding\CSharp\NetCore\PracticeC\PracticeC\bin\Debug\net6.0\PracticeC.exe
+D:\Coding\CSharp\NetCore\PracticeC\PracticeC\bin\Debug\net6.0\PracticeC.deps.json
+D:\Coding\CSharp\NetCore\PracticeC\PracticeC\bin\Debug\net6.0\PracticeC.runtimeconfig.json
+D:\Coding\CSharp\NetCore\PracticeC\PracticeC\bin\Debug\net6.0\PracticeC.dll
+D:\Coding\CSharp\NetCore\PracticeC\PracticeC\bin\Debug\net6.0\PracticeC.pdb
+D:\Coding\CSharp\NetCore\PracticeC\PracticeC\obj\Debug\net6.0\PracticeC.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\CSharp\NetCore\PracticeC\PracticeC\obj\Debug\net6.0\PracticeC.AssemblyInfoInputs.cache
+D:\Coding\CSharp\NetCore\PracticeC\PracticeC\obj\Debug\net6.0\PracticeC.AssemblyInfo.cs
+D:\Coding\CSharp\NetCore\PracticeC\PracticeC\obj\Debug\net6.0\PracticeC.csproj.CoreCompileInputs.cache
+D:\Coding\CSharp\NetCore\PracticeC\PracticeC\obj\Debug\net6.0\PracticeC.dll
+D:\Coding\CSharp\NetCore\PracticeC\PracticeC\obj\Debug\net6.0\refint\PracticeC.dll
+D:\Coding\CSharp\NetCore\PracticeC\PracticeC\obj\Debug\net6.0\PracticeC.pdb
+D:\Coding\CSharp\NetCore\PracticeC\PracticeC\obj\Debug\net6.0\PracticeC.genruntimeconfig.cache
+D:\Coding\CSharp\NetCore\PracticeC\PracticeC\obj\Debug\net6.0\ref\PracticeC.dll
