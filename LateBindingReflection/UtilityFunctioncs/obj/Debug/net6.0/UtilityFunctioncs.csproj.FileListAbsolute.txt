@@ -1,0 +1,11 @@
+D:\Coding\CSharp\NetCore\LateBindingReflection\UtilityFunctioncs\bin\Debug\net6.0\UtilityFunctioncs.deps.json
+D:\Coding\CSharp\NetCore\LateBindingReflection\UtilityFunctioncs\bin\Debug\net6.0\UtilityFunctioncs.dll
+D:\Coding\CSharp\NetCore\LateBindingReflection\UtilityFunctioncs\bin\Debug\net6.0\UtilityFunctioncs.pdb
+D:\Coding\CSharp\NetCore\LateBindingReflection\UtilityFunctioncs\obj\Debug\net6.0\UtilityFunctioncs.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\CSharp\NetCore\LateBindingReflection\UtilityFunctioncs\obj\Debug\net6.0\UtilityFunctioncs.AssemblyInfoInputs.cache
+D:\Coding\CSharp\NetCore\LateBindingReflection\UtilityFunctioncs\obj\Debug\net6.0\UtilityFunctioncs.AssemblyInfo.cs
+D:\Coding\CSharp\NetCore\LateBindingReflection\UtilityFunctioncs\obj\Debug\net6.0\UtilityFunctioncs.csproj.CoreCompileInputs.cache
+D:\Coding\CSharp\NetCore\LateBindingReflection\UtilityFunctioncs\obj\Debug\net6.0\UtilityFunctioncs.dll
+D:\Coding\CSharp\NetCore\LateBindingReflection\UtilityFunctioncs\obj\Debug\net6.0\refint\UtilityFunctioncs.dll
+D:\Coding\CSharp\NetCore\LateBindingReflection\UtilityFunctioncs\obj\Debug\net6.0\UtilityFunctioncs.pdb
+D:\Coding\CSharp\NetCore\LateBindingReflection\UtilityFunctioncs\obj\Debug\net6.0\ref\UtilityFunctioncs.dll
