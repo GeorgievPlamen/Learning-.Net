@@ -1,0 +1,15 @@
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Application\bin\Debug\net6.0\HR.LeaveManagement.Application.deps.json
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Application\bin\Debug\net6.0\HR.LeaveManagement.Application.dll
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Application\bin\Debug\net6.0\HR.LeaveManagement.Application.pdb
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Application\bin\Debug\net6.0\HR.LeaveManagement.Domain.dll
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Application\bin\Debug\net6.0\HR.LeaveManagement.Domain.pdb
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Application\obj\Debug\net6.0\HR.LeaveManagement.Application.csproj.AssemblyReference.cache
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Application\obj\Debug\net6.0\HR.LeaveManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Application\obj\Debug\net6.0\HR.LeaveManagement.Application.AssemblyInfoInputs.cache
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Application\obj\Debug\net6.0\HR.LeaveManagement.Application.AssemblyInfo.cs
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Application\obj\Debug\net6.0\HR.LeaveManagement.Application.csproj.CoreCompileInputs.cache
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Application\obj\Debug\net6.0\HR.LeaveManagement.Application.csproj.CopyComplete
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Application\obj\Debug\net6.0\HR.LeaveManagement.Application.dll
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Application\obj\Debug\net6.0\refint\HR.LeaveManagement.Application.dll
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Application\obj\Debug\net6.0\HR.LeaveManagement.Application.pdb
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Application\obj\Debug\net6.0\ref\HR.LeaveManagement.Application.dll
