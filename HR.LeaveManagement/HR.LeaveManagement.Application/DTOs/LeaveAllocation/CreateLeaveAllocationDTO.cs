@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HR.LeaveManagement.Application.DTOs.LeaveAllocation
 {
-    public class CreateLeaveAllocationDTO
+    public class CreateLeaveAllocationDTO : ILeaveAllocationDTO
     {
         public int NumberOfDays { get; set; }
         public LeaveTypeDTO? LeaveType { get; set; }
