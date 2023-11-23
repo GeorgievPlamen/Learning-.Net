@@ -6,9 +6,12 @@ using HR.LeaveManagement.Domain;
 using MediatR;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ValidationException = HR.LeaveManagement.Application.Exceptions.ValidationException;
+
 
 namespace HR.LeaveManagement.Application.Features.LeaveTypes.Handlers.Commands
 {
@@ -33,7 +36,8 @@ namespace HR.LeaveManagement.Application.Features.LeaveTypes.Handlers.Commands
 
             if(!validationResult.IsValid)
             {
-                throw new Exception();
+                throw new ValidationException(validationResult);
+
             }
 
             var leaveType = _mapper.Map<LeaveType>(request.CreateLeaveTypeDTO);

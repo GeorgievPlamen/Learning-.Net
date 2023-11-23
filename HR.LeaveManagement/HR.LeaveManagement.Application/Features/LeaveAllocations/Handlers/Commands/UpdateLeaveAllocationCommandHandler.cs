@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ValidationException = HR.LeaveManagement.Application.Exceptions.ValidationException;
 
 namespace HR.LeaveManagement.Application.Features.LeaveAllocations.Handlers.Commands
 {
@@ -32,7 +33,7 @@ namespace HR.LeaveManagement.Application.Features.LeaveAllocations.Handlers.Comm
             var validationResult = await validator.ValidateAsync(request.UpdateLeaveAllocationDTO);
             if (validationResult.IsValid == false)
             {
-                throw new Exception();
+                throw new ValidationException(validationResult);
             }
 
             var leaveAllocation = await _allocationRepository.Get(request.UpdateLeaveAllocationDTO.Id);

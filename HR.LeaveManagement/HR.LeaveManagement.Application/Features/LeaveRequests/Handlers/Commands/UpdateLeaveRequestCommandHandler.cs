@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ValidationException = HR.LeaveManagement.Application.Exceptions.ValidationException;
+
 
 namespace HR.LeaveManagement.Application.Features.LeaveRequests.Handlers.Commands
 {
@@ -33,7 +35,7 @@ namespace HR.LeaveManagement.Application.Features.LeaveRequests.Handlers.Command
                 var validationResult = await validator.ValidateAsync(request.LeaveRequestDTO);
                 if(validationResult.IsValid == false)
                 {
-                    throw new Exception();
+                    throw new ValidationException(validationResult);
                 }
 
                 _mapper.Map(request.LeaveRequestDTO, leaveRequest);
