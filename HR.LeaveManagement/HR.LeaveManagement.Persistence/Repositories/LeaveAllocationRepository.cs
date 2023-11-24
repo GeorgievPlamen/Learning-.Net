@@ -1,10 +1,12 @@
 ﻿using HR.LeaveManagement.Application.Persistence.Contracts;
 using HR.LeaveManagement.Domain;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace HR.LeaveManagement.Persistence.Repositories
 {
@@ -17,39 +19,50 @@ namespace HR.LeaveManagement.Persistence.Repositories
             _dbContext = dbContext;
         }
 
-        public Task<LeaveAllocation> Add(LeaveAllocation entity)
+        public async Task<LeaveAllocation> Add(LeaveAllocation entity)
         {
-            throw new NotImplementedException();
+            await _dbContext.AddAsync(entity);
+            await _dbContext.SaveChangesAsync();
+            return entity;
         }
 
-        public Task Delete(LeaveAllocation entity)
+        public async Task Delete(LeaveAllocation entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Set<LeaveAllocation>().Remove(entity);
+            await _dbContext.SaveChangesAsync();
         }
 
         public Task<List<LeaveAllocation>> GetLeaveAllocationsWithDetails()
         {
-            throw new NotImplementedException();
+            var leaveAllocations = _dbContext.LeaveAllocations
+                .Include(x => x.LeaveType)
+                .ToListAsync();
+            return leaveAllocations;
         }
 
-        public Task<LeaveAllocation> GetLeaveAllocationWithDetails(int id)
+        public async Task<LeaveAllocation> GetLeaveAllocationWithDetails(int id)
         {
-            throw new NotImplementedException();
+            var leaveAllocation = await _dbContext.LeaveAllocations
+                .Include(x => x.LeaveType)
+                .FirstOrDefaultAsync(x => x.Id == id);
+            return leaveAllocation ?? throw new ArgumentNullException("Invalid id",nameof(leaveAllocation));
         }
 
-        public Task Update(LeaveAllocation entity)
+        public async Task Update(LeaveAllocation entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Entry(entity).State = EntityState.Modified;
+            await _dbContext.SaveChangesAsync();
         }
 
-        Task<LeaveAllocation> IGenericRepository<LeaveAllocation>.Get(int id)
+        async Task<LeaveAllocation> IGenericRepository<LeaveAllocation>.Get(int id)
         {
-            throw new NotImplementedException();
+            return await _dbContext.Set<LeaveAllocation>().FindAsync(id) ?? throw new ArgumentNullException();
+
         }
 
-        Task<IReadOnlyList<LeaveAllocation>> IGenericRepository<LeaveAllocation>.GetAll()
+        async Task<IReadOnlyList<LeaveAllocation>> IGenericRepository<LeaveAllocation>.GetAll()
         {
-            throw new NotImplementedException();
+            return await _dbContext.Set<LeaveAllocation>().ToListAsync();
         }
     }
 }

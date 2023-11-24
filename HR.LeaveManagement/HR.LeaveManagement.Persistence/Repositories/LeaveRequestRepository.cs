@@ -1,11 +1,13 @@
 ﻿using HR.LeaveManagement.Application.DTOs.LeaveRequest;
 using HR.LeaveManagement.Application.Persistence.Contracts;
 using HR.LeaveManagement.Domain;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace HR.LeaveManagement.Persistence.Repositories
 {
@@ -18,44 +20,57 @@ namespace HR.LeaveManagement.Persistence.Repositories
             _dbContext = dbContext;
         }
 
-        public Task<LeaveRequest> Add(LeaveRequest entity)
+        public async Task<LeaveRequest> Add(LeaveRequest entity)
         {
-            throw new NotImplementedException();
+            await _dbContext.AddAsync(entity);
+            await _dbContext.SaveChangesAsync();
+            return entity;
         }
 
-        public Task ChangeApprovalStatus(LeaveRequest leaveRequest, bool? approvalStatus)
+        public async Task ChangeApprovalStatus(LeaveRequest leaveRequest, bool? approvalStatus)
         {
-            throw new NotImplementedException();
+            leaveRequest.Approved = approvalStatus;
+            _dbContext.Entry(leaveRequest).State = EntityState.Modified;
+            await _dbContext.SaveChangesAsync();
         }
 
-        public Task Delete(LeaveRequest entity)
+        public async Task Delete(LeaveRequest entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Set<LeaveRequest>().Remove(entity);
+            await _dbContext.SaveChangesAsync();
         }
 
-        public Task<List<LeaveRequest>> GetLeaveRequestsWithDetails()
+        public async Task<List<LeaveRequest>> GetLeaveRequestsWithDetails()
         {
-            throw new NotImplementedException();
+            var leaveRequests = await _dbContext.LeaveRequests
+                .Include(q => q.LeaveType)
+                .ToListAsync();
+            return leaveRequests;
         }
 
-        public Task<LeaveRequest> GetLeaveRequestWithDetails(int id)
+        public async Task<LeaveRequest> GetLeaveRequestWithDetails(int id)
         {
-            throw new NotImplementedException();
+            var leaveRequest = await _dbContext.LeaveRequests
+                .Include (q => q.LeaveType)
+                .SingleOrDefaultAsync(q => q.Id == id);
+            return leaveRequest ?? throw new ArgumentNullException("Invalid id", nameof(leaveRequest));
         }
 
-        public Task Update(LeaveRequest entity)
+        public async Task Update(LeaveRequest entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Entry(entity).State = EntityState.Modified;
+            await _dbContext.SaveChangesAsync();
         }
 
-        Task<LeaveRequest> IGenericRepository<LeaveRequest>.Get(int id)
+        async Task<LeaveRequest> IGenericRepository<LeaveRequest>.Get(int id)
         {
-            throw new NotImplementedException();
+            return await _dbContext.Set<LeaveRequest>().FindAsync(id) ?? throw new ArgumentNullException();
+
         }
 
-        Task<IReadOnlyList<LeaveRequest>> IGenericRepository<LeaveRequest>.GetAll()
+        async Task<IReadOnlyList<LeaveRequest>> IGenericRepository<LeaveRequest>.GetAll()
         {
-            throw new NotImplementedException();
+            return await _dbContext.Set<LeaveRequest>().ToListAsync();
         }
     }
 }
