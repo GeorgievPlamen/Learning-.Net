@@ -1,5 +1,5 @@
 ﻿using HR.LeaveManagement.Application.DTOs.LeaveRequest;
-using HR.LeaveManagement.Application.Persistence.Contracts;
+using HR.LeaveManagement.Application.Contracts.Persistence;
 using HR.LeaveManagement.Domain;
 using Microsoft.EntityFrameworkCore;
 using System;

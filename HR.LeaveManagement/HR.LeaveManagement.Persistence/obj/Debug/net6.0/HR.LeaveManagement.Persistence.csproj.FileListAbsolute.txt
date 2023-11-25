@@ -1,0 +1,17 @@
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Persistence\bin\Debug\net6.0\HR.LeaveManagement.Persistence.deps.json
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Persistence\bin\Debug\net6.0\HR.LeaveManagement.Persistence.dll
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Persistence\bin\Debug\net6.0\HR.LeaveManagement.Persistence.pdb
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Persistence\bin\Debug\net6.0\HR.LeaveManagement.Application.dll
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Persistence\bin\Debug\net6.0\HR.LeaveManagement.Domain.dll
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Persistence\bin\Debug\net6.0\HR.LeaveManagement.Application.pdb
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Persistence\bin\Debug\net6.0\HR.LeaveManagement.Domain.pdb
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Persistence\obj\Debug\net6.0\HR.LeaveManagement.Persistence.csproj.AssemblyReference.cache
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Persistence\obj\Debug\net6.0\HR.LeaveManagement.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Persistence\obj\Debug\net6.0\HR.LeaveManagement.Persistence.AssemblyInfoInputs.cache
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Persistence\obj\Debug\net6.0\HR.LeaveManagement.Persistence.AssemblyInfo.cs
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Persistence\obj\Debug\net6.0\HR.LeaveManagement.Persistence.csproj.CoreCompileInputs.cache
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Persistence\obj\Debug\net6.0\HR.LeaveManagement.Persistence.csproj.CopyComplete
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Persistence\obj\Debug\net6.0\HR.LeaveManagement.Persistence.dll
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Persistence\obj\Debug\net6.0\refint\HR.LeaveManagement.Persistence.dll
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Persistence\obj\Debug\net6.0\HR.LeaveManagement.Persistence.pdb
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Persistence\obj\Debug\net6.0\ref\HR.LeaveManagement.Persistence.dll
