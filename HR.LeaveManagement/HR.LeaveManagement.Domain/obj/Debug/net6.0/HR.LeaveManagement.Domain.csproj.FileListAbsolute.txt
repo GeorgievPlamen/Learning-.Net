@@ -9,3 +9,5 @@ D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Domain\obj\Debug\
 D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Domain\obj\Debug\net6.0\refint\HR.LeaveManagement.Domain.dll
 D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Domain\obj\Debug\net6.0\HR.LeaveManagement.Domain.pdb
 D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Domain\obj\Debug\net6.0\ref\HR.LeaveManagement.Domain.dll
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Domain\bin\Debug\net6.0\HR.LeaveManagement.Domain.runtimeconfig.json
+D:\Coding\CSharp\NetCore\HR.LeaveManagement\HR.LeaveManagement.Domain\obj\Debug\net6.0\HR.LeaveManagement.Domain.genruntimeconfig.cache
